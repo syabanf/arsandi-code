@@ -1,0 +1,28 @@
+{
+  "name": "arsandi-code",
+  "version": "0.0.1",
+  "description": "Arsandi Code — a retro 8-bit techno-fantasy tactical JRPG (web).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "assets": "node tools/pixelize.mjs",
+    "world": "node tools/build-world.mjs",
+    "minions": "node tools/minions.mjs",
+    "lpc": "node tools/lpc.mjs",
+    "monsters": "node tools/monsters-lpc.mjs",
+    "heroes": "node tools/heroes.mjs",
+    "sim": "node tools/sim.mjs"
+  },
+  "dependencies": {
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.184.1",
+    "sharp": "^0.33.5",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.5"
+  }
+}

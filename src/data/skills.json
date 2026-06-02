@@ -1,0 +1,38 @@
+[
+  { "id": "code-slash", "name": "Code Slash", "owner": "saka", "kind": "physical", "element": "code-energy", "cost": 0, "power": 18, "range": 1, "targeting": "single", "description": "A swift energy-blade slash. The reliable basic attack." },
+  { "id": "byte-impact", "name": "Byte Impact", "owner": "saka", "kind": "physical", "element": "code-energy", "cost": 8, "power": 30, "range": 1, "targeting": "single", "description": "A heavy concentrated strike that hits a single target hard." },
+  { "id": "glitch-step", "name": "Glitch Step", "owner": "saka", "kind": "buff", "element": "code-energy", "cost": 6, "power": 0, "range": 0, "targeting": "self", "description": "Blinks a short distance and raises evasion for one turn." },
+  { "id": "overwrite", "name": "Overwrite", "owner": "saka", "kind": "debuff", "element": "code-energy", "cost": 12, "power": 20, "range": 1, "targeting": "single", "description": "Overwrites the target's data, dealing damage and lowering its defense." },
+  { "id": "core-break", "name": "Core Break", "owner": "saka", "kind": "physical", "element": "code-energy", "cost": 20, "power": 45, "range": 1, "targeting": "single", "description": "An armor-piercing finisher that ignores part of the target's defense." },
+
+  { "id": "code-bolt", "name": "Code Bolt", "owner": "kara", "kind": "magical", "element": "code-energy", "cost": 6, "power": 22, "range": 4, "targeting": "single", "description": "A ranged bolt of condensed code energy." },
+  { "id": "arcane-circle", "name": "Arcane Circle", "owner": "kara", "kind": "magical", "element": "code-energy", "cost": 14, "power": 26, "range": 4, "targeting": "area", "description": "Detonates an arcane circle, damaging all enemies in a small area." },
+  { "id": "code-shield", "name": "Code Shield", "owner": "kara", "kind": "buff", "element": "code-energy", "cost": 10, "power": 0, "range": 2, "targeting": "ally", "description": "Wraps an ally in a barrier that absorbs incoming damage." },
+  { "id": "data-paralysis", "name": "Data Paralysis", "owner": "kara", "kind": "debuff", "element": "code-energy", "cost": 12, "power": 0, "range": 3, "targeting": "single", "description": "Corrupts a target's data, paralyzing it so it loses its next turn." },
+  { "id": "rewrite", "name": "Rewrite", "owner": "kara", "kind": "heal", "element": "code-energy", "cost": 16, "power": 40, "range": 2, "targeting": "ally", "description": "Rewrites an ally's damaged data, restoring a large amount of HP." },
+  { "id": "code-collapse", "name": "Code Collapse", "owner": "kara", "kind": "magical", "element": "code-energy", "cost": 24, "power": 50, "range": 4, "targeting": "all-enemies", "description": "Collapses the local code structure, dealing massive damage to all enemies." },
+
+  { "id": "mech-smash", "name": "Mech Smash", "owner": "zell", "kind": "physical", "element": "code-tech", "cost": 0, "power": 22, "range": 1, "targeting": "single", "description": "A crushing hammer smash. Zell's basic attack." },
+  { "id": "gear-shock", "name": "Gear Shock", "owner": "zell", "kind": "physical", "element": "code-tech", "cost": 8, "power": 24, "range": 1, "targeting": "area", "description": "Slams the ground, shocking all enemies adjacent to Zell." },
+  { "id": "repair-field", "name": "Repair Field", "owner": "zell", "kind": "heal", "element": "code-tech", "cost": 12, "power": 25, "range": 1, "targeting": "all-allies", "description": "Deploys a repair field that heals nearby allies." },
+  { "id": "magnet-pull", "name": "Magnet Pull", "owner": "zell", "kind": "debuff", "element": "code-tech", "cost": 6, "power": 8, "range": 3, "targeting": "single", "description": "Drags a distant enemy closer and deals minor damage." },
+  { "id": "overdrive", "name": "Overdrive", "owner": "zell", "kind": "buff", "element": "code-tech", "cost": 14, "power": 0, "range": 0, "targeting": "self", "description": "Overclocks Zell, sharply raising attack and defense for several turns." },
+  { "id": "core-burst", "name": "Core Burst", "owner": "zell", "kind": "physical", "element": "code-tech", "cost": 22, "power": 48, "range": 1, "targeting": "area", "description": "Vents the hammer's core in an explosive burst, hitting all nearby enemies." },
+
+  { "id": "servo-slam", "name": "Servo Slam", "owner": "enemy", "kind": "physical", "element": "code-tech", "cost": 0, "power": 14, "range": 1, "targeting": "single", "description": "A heavy mechanical slam against an adjacent target." },
+  { "id": "drone-shot", "name": "Drone Shot", "owner": "enemy", "kind": "magical", "element": "code-tech", "cost": 4, "power": 12, "range": 3, "targeting": "single", "description": "A ranged energy bolt fired from a hovering drone." },
+  { "id": "corrupt-strike", "name": "Corrupt Strike", "owner": "enemy", "kind": "debuff", "element": "code-tech", "cost": 0, "power": 14, "range": 1, "targeting": "single", "description": "A corrupting blow that wounds and weakens the target's defense." },
+  { "id": "shock-bolt", "name": "Shock Bolt", "owner": "enemy", "kind": "magical", "element": "code-tech", "cost": 6, "power": 14, "range": 3, "targeting": "single", "description": "A jolt that damages and paralyzes a target for a turn." },
+  { "id": "group-volley", "name": "Group Volley", "owner": "enemy", "kind": "magical", "element": "code-tech", "cost": 8, "power": 14, "range": 4, "targeting": "all-enemies", "description": "A spread of energy that splashes the whole party." },
+  { "id": "mend-protocol", "name": "Mend Protocol", "owner": "enemy", "kind": "heal", "element": "code-tech", "cost": 8, "power": 28, "range": 3, "targeting": "ally", "description": "Repairs an allied unit, restoring its HP." },
+  { "id": "enrage", "name": "Enrage", "owner": "enemy", "kind": "buff", "element": "neutral", "cost": 6, "power": 0, "range": 0, "targeting": "self", "description": "Floods its core with rage, sharply raising its attack." },
+
+  { "id": "laser-beam", "name": "Laser Beam", "owner": "boss", "kind": "magical", "element": "code-tech", "cost": 0, "power": 16, "range": 4, "targeting": "single", "description": "A focused beam that lances a single target." },
+  { "id": "ground-pound", "name": "Ground Pound", "owner": "boss", "kind": "physical", "element": "code-tech", "cost": 0, "power": 20, "range": 1, "targeting": "area", "description": "A seismic slam that rocks everything nearby." },
+  { "id": "drone-swarm", "name": "Drone Swarm", "owner": "boss", "kind": "magical", "element": "code-tech", "cost": 0, "power": 18, "range": 5, "targeting": "area", "description": "Releases drones that strafe an area." },
+  { "id": "glitch-field", "name": "Glitch Field", "owner": "boss", "kind": "debuff", "element": "code-tech", "cost": 0, "power": 10, "range": 3, "targeting": "area", "description": "Corrupts an area, damaging foes and weakening their defense." },
+  { "id": "eye-cannon", "name": "Eye Cannon", "owner": "boss", "kind": "magical", "element": "code-tech", "cost": 0, "power": 30, "range": 6, "targeting": "single", "description": "An overcharged core blast that devastates a single target." },
+
+  { "id": "boss-strike", "name": "Crushing Strike", "owner": "boss", "kind": "physical", "element": "neutral", "cost": 0, "power": 22, "range": 1, "targeting": "single", "description": "A brutal melee blow." },
+  { "id": "boss-blast", "name": "Energy Blast", "owner": "boss", "kind": "magical", "element": "neutral", "cost": 0, "power": 20, "range": 4, "targeting": "single", "description": "A ranged burst of corrupted energy." }
+]

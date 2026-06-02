@@ -1,0 +1,26 @@
+Third-party art assets used in Arsandi Code
+============================================
+
+Tilesets & maps: 100% procedurally generated (tools/build-world.mjs) — no
+third-party tileset art ships in the game. (Earlier CC0 tileset packs were
+dropped when the art moved fully procedural; their source PNGs and the
+import-tileset tool have been removed.)
+
+Character / boss / background / title art: generated from the project's own
+concept renders in Assets/ via tools/pixelize.mjs.
+
+Minion sprites: generated procedurally via tools/minions.mjs, OR derived from
+the CC-BY monster pack below.
+
+
+REQUIRES ATTRIBUTION (not CC0):
+-------------------------------
+"RPG Maker-y Monster Sprites!" by titleknown
+  License: CC-BY 3.0 / CC-BY 4.0 / OGA-BY 3.0  (attribution REQUIRED)
+  Source: https://opengameart.org/content/rpg-maker-y-monster-sprites
+  Used as the basis for the 16 minion sprites (public/assets/sprites/minion-*.png).
+  Attribution: "RPG Maker-y Monster Sprites" by titleknown, used under CC-BY.
+  -> This credit MUST be shown in the game's credits / distribution.
+     (The original source PNG is no longer kept in-repo; the derived,
+     recoloured minion sprites remain and still carry this attribution
+     requirement.)

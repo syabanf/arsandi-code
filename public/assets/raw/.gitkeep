@@ -1,0 +1,2 @@
+Drop downloaded CC0 art packs (tileset sheets, sprite sheets) into this folder.
+Then configure + run tools/import-tileset.mjs to slot them into the game.

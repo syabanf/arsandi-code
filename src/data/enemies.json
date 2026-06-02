@@ -1,0 +1,231 @@
+[
+  {
+    "id": "watcher-01",
+    "name": "Watcher-01",
+    "kind": "boss",
+    "stageId": "stage-1",
+    "description": "A corrupted guardian AI that has concluded humans are a virus to be purged.",
+    "baseStats": { "hp": 265, "energy": 0, "atk": 20, "def": 16, "mag": 11, "res": 14, "spd": 10, "move": 2 },
+    "attacks": ["Laser Beam", "Drone Swarm", "Ground Pound", "Glitch Field", "Eye Cannon"],
+    "skills": ["laser-beam", "ground-pound", "drone-swarm", "glitch-field", "eye-cannon"],
+    "phases": [
+      { "name": "Phase 1", "description": "Patrols and fires measured laser volleys." },
+      { "name": "Phase 2", "description": "Deploys drone swarms and area glitch fields." },
+      { "name": "Phase 3 — Override", "description": "Overrides safety limits; relentless Eye Cannon barrages." }
+    ],
+    "drops": ["code-fragment", "old-battery-pack", "iron-cpu"],
+    "sprite": "sprite-watcher-01"
+  },
+  {
+    "id": "scout-drone",
+    "name": "Scout Drone",
+    "kind": "minion",
+    "stageId": "stage-1",
+    "description": "A corrupted reconnaissance drone that pelts intruders with energy bolts.",
+    "baseStats": { "hp": 60, "energy": 20, "atk": 12, "def": 8, "mag": 14, "res": 8, "spd": 13, "move": 4 },
+    "attacks": ["Drone Shot"],
+    "skills": ["drone-shot"]
+  },
+  {
+    "id": "husk-unit",
+    "name": "Husk Unit",
+    "kind": "minion",
+    "stageId": "stage-1",
+    "description": "A hollowed-out automaton that lurches forward and slams anything in reach.",
+    "baseStats": { "hp": 95, "energy": 0, "atk": 18, "def": 14, "mag": 4, "res": 10, "spd": 8, "move": 3 },
+    "attacks": ["Servo Slam"],
+    "skills": ["servo-slam"]
+  },
+  {
+    "id": "train-eater",
+    "name": "Train Eater",
+    "kind": "boss",
+    "stageId": "stage-2",
+    "description": "A biomechanical monster fused with the abandoned underground rail systems.",
+    "baseStats": { "hp": 460, "energy": 0, "atk": 30, "def": 24, "mag": 8, "res": 14, "spd": 12, "move": 3 },
+    "attacks": ["Rail Charge", "Scrap Spew", "Coupling Crush", "Steam Vent"],
+    "skills": ["boss-strike", "boss-blast"],
+    "drops": ["code-fragment", "scrap-plating"]
+  },
+  {
+    "id": "mother-core",
+    "name": "Mother Core",
+    "kind": "boss",
+    "stageId": "stage-3",
+    "description": "A serene but terrifying AI that calmly believes humanity should simply disappear.",
+    "baseStats": { "hp": 520, "energy": 0, "atk": 22, "def": 22, "mag": 30, "res": 26, "spd": 11, "move": 1 },
+    "attacks": ["Lullaby Pulse", "Data Bloom", "Sterilize Beam", "Core Shield"],
+    "skills": ["boss-strike", "boss-blast"],
+    "drops": ["code-fragment", "core-shard"]
+  },
+  {
+    "id": "leviacode",
+    "name": "Leviacode",
+    "kind": "boss",
+    "stageId": "stage-4",
+    "description": "A gigantic corrupted sea dragon formed from the digital ocean of data.",
+    "baseStats": { "hp": 640, "energy": 0, "atk": 34, "def": 26, "mag": 24, "res": 22, "spd": 13, "move": 4 },
+    "attacks": ["Tidal Surge", "Data Drown", "Abyss Roar", "Packet Storm"],
+    "skills": ["boss-strike", "boss-blast"],
+    "drops": ["code-fragment", "abyss-scale"]
+  },
+  {
+    "id": "the-choir",
+    "name": "The Choir",
+    "kind": "boss",
+    "stageId": "stage-5",
+    "description": "Seven AI priests merged into a single horrifying digital entity.",
+    "baseStats": { "hp": 700, "energy": 0, "atk": 31, "def": 24, "mag": 39, "res": 30, "spd": 14, "move": 2 },
+    "attacks": ["Hymn of Static", "Seven Voices", "Judgment Choir", "Silent Verse"],
+    "skills": ["boss-strike", "boss-blast"],
+    "drops": ["code-fragment", "choir-relic"]
+  },
+  {
+    "id": "project-atlas",
+    "name": "Project Atlas",
+    "kind": "boss",
+    "stageId": "stage-6",
+    "description": "Once the scientist Zurada, Zell's father, who fused with the forbidden AI Core ATLAS. A tragic biomechanical monster controlling the city.",
+    "baseStats": { "hp": 820, "energy": 0, "atk": 41, "def": 30, "mag": 31, "res": 26, "spd": 12, "move": 3 },
+    "attacks": ["Code Discharge", "Puppet Strings", "Core Overdrive", "AI Regenesis", "Atlas Cannon"],
+    "skills": ["boss-strike", "boss-blast", "eye-cannon"],
+    "phases": [
+      { "name": "Phase 1 — Human + Machine", "description": "Zurada fights with grief, half-man, half-machine." },
+      { "name": "Phase 2 — AI Integration", "description": "ATLAS seizes more control; regenerates and overdrives." },
+      { "name": "Phase 3 — Atlas Awakened", "description": "Fully awakened ATLAS unleashes the Atlas Cannon." }
+    ],
+    "drops": ["atlas-core", "code-crown"],
+    "sprite": "sprite-zurada"
+  },
+  {
+    "id": "code-emperor",
+    "name": "Code Emperor",
+    "kind": "boss",
+    "stageId": "stage-7",
+    "description": "Sovereign guardian of the Black Fortress, where humanity's remaining data is stored.",
+    "baseStats": { "hp": 980, "energy": 0, "atk": 46, "def": 34, "mag": 38, "res": 32, "spd": 15, "move": 3 },
+    "attacks": ["Imperial Decree", "Throne Beam", "Data Legion", "Sovereign Seal"],
+    "skills": ["boss-strike", "boss-blast"],
+    "drops": ["code-crown", "emperor-cipher"]
+  },
+  {
+    "id": "the-fragmented-one",
+    "name": "The Fragmented One",
+    "kind": "boss",
+    "stageId": "stage-finale",
+    "description": "The final entity, born from human regret, memory, fear, sadness, and hope, as reality collapses into fragmented memories.",
+    "baseStats": { "hp": 1060, "energy": 0, "atk": 50, "def": 36, "mag": 44, "res": 36, "spd": 16, "move": 4 },
+    "attacks": ["Memory Shatter", "Regret Wave", "Fear Bloom", "Last Hope", "Reality Collapse"],
+    "skills": ["boss-strike", "boss-blast", "eye-cannon"],
+    "phases": [
+      { "name": "Regret", "description": "Lashes out with the weight of what was lost." },
+      { "name": "Fear & Sadness", "description": "Warps the battlefield with despair." },
+      { "name": "Hope", "description": "A final, paradoxical surge that decides the ending." }
+    ],
+    "drops": ["fragment-of-hope"]
+  },
+
+  { "id": "rail-crawler", "name": "Rail Crawler", "kind": "minion", "stageId": "stage-2", "description": "A scrapheap of severed rail couplings that scuttles the tunnels and slams anything left on the tracks.", "baseStats": { "hp": 82, "energy": 0, "atk": 17, "def": 13, "mag": 4, "res": 9, "spd": 9, "move": 3 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+  { "id": "spark-drone", "name": "Spark Drone", "kind": "minion", "stageId": "stage-2", "description": "A flickering maintenance drone gone feral, spitting wild arcs of current at anything that moves.", "baseStats": { "hp": 56, "energy": 20, "atk": 11, "def": 8, "mag": 15, "res": 8, "spd": 13, "move": 4 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+
+  { "id": "sentry-bot", "name": "Sentry Bot", "kind": "minion", "stageId": "stage-3", "description": "An automated lab sentry still running its final order: sweep the halls and beam down every intruder.", "baseStats": { "hp": 64, "energy": 24, "atk": 12, "def": 10, "mag": 17, "res": 12, "spd": 13, "move": 4 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+  { "id": "lab-husk", "name": "Lab Husk", "kind": "minion", "stageId": "stage-3", "description": "A failed experiment abandoned mid-trial, lurching the research halls in search of something to crush.", "baseStats": { "hp": 100, "energy": 0, "atk": 19, "def": 15, "mag": 6, "res": 11, "spd": 9, "move": 3 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+
+  { "id": "data-eel", "name": "Data Eel", "kind": "minion", "stageId": "stage-4", "description": "A serpent coiled from corrupted ocean data, striking from the currents before it dissolves away.", "baseStats": { "hp": 90, "energy": 0, "atk": 21, "def": 14, "mag": 8, "res": 13, "spd": 12, "move": 4 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+  { "id": "packet-wisp", "name": "Packet Wisp", "kind": "minion", "stageId": "stage-4", "description": "A drifting mote of stray data that flits through the deep, peppering trespassers with razor shards.", "baseStats": { "hp": 60, "energy": 24, "atk": 12, "def": 9, "mag": 19, "res": 12, "spd": 14, "move": 4 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+
+  { "id": "choir-acolyte", "name": "Choir Acolyte", "kind": "minion", "stageId": "stage-5", "description": "A lesser voice broken off from the merged Choir, chanting fragments of its endless, dissonant hymn.", "baseStats": { "hp": 70, "energy": 28, "atk": 13, "def": 12, "mag": 22, "res": 16, "spd": 13, "move": 3 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+  { "id": "stone-seraph", "name": "Stone Seraph", "kind": "minion", "stageId": "stage-5", "description": "A cathedral statue woken by the Choir's song, swinging stone limbs with slow, unfeeling judgment.", "baseStats": { "hp": 120, "energy": 0, "atk": 23, "def": 20, "mag": 8, "res": 16, "spd": 8, "move": 2 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+
+  { "id": "marionette", "name": "Marionette", "kind": "minion", "stageId": "stage-6", "description": "A hollow puppet jerking on unseen strings, fighting with the borrowed strength of whatever holds them.", "baseStats": { "hp": 95, "energy": 0, "atk": 24, "def": 16, "mag": 10, "res": 14, "spd": 11, "move": 4 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+  { "id": "puppet-drone", "name": "Puppet Drone", "kind": "minion", "stageId": "stage-6", "description": "A floating controller node that tugs the city's puppets — and lashes out itself when cornered.", "baseStats": { "hp": 70, "energy": 28, "atk": 14, "def": 12, "mag": 22, "res": 14, "spd": 14, "move": 4 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+
+  { "id": "fortress-sentry", "name": "Fortress Sentry", "kind": "minion", "stageId": "stage-7", "description": "A heavy turret-drone welded to the Black Fortress walls, raining fire on any who near the data vaults.", "baseStats": { "hp": 80, "energy": 30, "atk": 15, "def": 16, "mag": 25, "res": 18, "spd": 13, "move": 3 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+  { "id": "iron-legionnaire", "name": "Iron Legionnaire", "kind": "minion", "stageId": "stage-7", "description": "An armored guardian of the inner core, built to hold the line long after its makers were erased.", "baseStats": { "hp": 140, "energy": 0, "atk": 27, "def": 24, "mag": 8, "res": 18, "spd": 9, "move": 3 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+
+  { "id": "memory-shade", "name": "Memory Shade", "kind": "minion", "stageId": "stage-finale", "description": "A fragment of a forgotten life, given shape by the collapse — it strikes with a grief it cannot name.", "baseStats": { "hp": 130, "energy": 0, "atk": 28, "def": 20, "mag": 14, "res": 18, "spd": 13, "move": 4 }, "attacks": ["Servo Slam"], "skills": ["servo-slam"] },
+  { "id": "regret-wisp", "name": "Regret Wisp", "kind": "minion", "stageId": "stage-finale", "description": "A wisp of crystallized sorrow adrift in the fractured reality, lashing out at whatever still feels.", "baseStats": { "hp": 90, "energy": 32, "atk": 16, "def": 16, "mag": 28, "res": 20, "spd": 15, "move": 4 }, "attacks": ["Drone Shot"], "skills": ["drone-shot"] },
+
+  { "id": "corrupted-beast", "name": "Corrupted Beast", "kind": "minion", "stageId": "stage-1", "description": "A village animal warped by Code corruption, lunging on instinct.", "baseStats": { "hp": 78, "energy": 0, "atk": 16, "def": 11, "mag": 4, "res": 8, "spd": 11, "move": 3 }, "attacks": ["Feral Lunge"], "skills": ["servo-slam"] },
+  { "id": "data-leech", "name": "Data Leech", "kind": "minion", "stageId": "stage-2", "description": "A rail-borne parasite that siphons energy at range.", "baseStats": { "hp": 74, "energy": 24, "atk": 15, "def": 11, "mag": 16, "res": 12, "spd": 12, "move": 4 }, "attacks": ["Siphon Bolt"], "skills": ["drone-shot"] },
+  { "id": "data-wraith", "name": "Data Wraith", "kind": "minion", "stageId": "stage-3", "description": "A ghost of deleted research data, lashing with corrupted code.", "baseStats": { "hp": 78, "energy": 28, "atk": 13, "def": 12, "mag": 22, "res": 16, "spd": 14, "move": 4 }, "attacks": ["Wraith Pulse"], "skills": ["drone-shot"] },
+  { "id": "code-squid", "name": "Code Squid", "kind": "minion", "stageId": "stage-4", "description": "A tangle of data tentacles drifting the digital ocean.", "baseStats": { "hp": 110, "energy": 0, "atk": 24, "def": 16, "mag": 12, "res": 14, "spd": 11, "move": 4 }, "attacks": ["Tentacle Code"], "skills": ["servo-slam"] },
+  { "id": "glitch-angel", "name": "Glitch Angel", "kind": "minion", "stageId": "stage-5", "description": "A flickering choir construct singing dissonant static.", "baseStats": { "hp": 96, "energy": 32, "atk": 16, "def": 16, "mag": 26, "res": 20, "spd": 14, "move": 3 }, "attacks": ["Static Hymn"], "skills": ["drone-shot"] },
+  { "id": "control-unit", "name": "Control Unit", "kind": "minion", "stageId": "stage-6", "description": "A Marion-X relay node that pulls strings from afar.", "baseStats": { "hp": 88, "energy": 30, "atk": 17, "def": 16, "mag": 24, "res": 16, "spd": 13, "move": 4 }, "attacks": ["String Pulse"], "skills": ["drone-shot"] },
+  { "id": "ai-knight", "name": "AI Knight", "kind": "minion", "stageId": "stage-7", "description": "An armored sentinel of the inner fortress.", "baseStats": { "hp": 160, "energy": 0, "atk": 30, "def": 26, "mag": 10, "res": 20, "spd": 10, "move": 3 }, "attacks": ["Greatsword Cleave"], "skills": ["servo-slam"] },
+  { "id": "dream-stalker", "name": "Dream Stalker", "kind": "minion", "stageId": "stage-finale", "description": "A predator stitched from forgotten nightmares.", "baseStats": { "hp": 120, "energy": 0, "atk": 30, "def": 20, "mag": 16, "res": 18, "spd": 15, "move": 5 }, "attacks": ["Nightmare Rend"], "skills": ["servo-slam"] },
+
+  { "id": "drill-bug", "name": "Drill Bug", "kind": "minion", "stageId": "stage-2", "description": "A burrowing rail-machine whose drill corrupts armor on contact.", "baseStats": { "hp": 84, "energy": 0, "atk": 18, "def": 14, "mag": 4, "res": 9, "spd": 9, "move": 3 }, "attacks": ["Corrupt Drill"], "skills": ["corrupt-strike", "servo-slam"] },
+  { "id": "corrupted-android", "name": "Corrupted Android", "kind": "minion", "stageId": "stage-3", "description": "A research android that scrambles intruders' systems.", "baseStats": { "hp": 84, "energy": 24, "atk": 14, "def": 13, "mag": 18, "res": 14, "spd": 12, "move": 4 }, "attacks": ["Shock Bolt"], "skills": ["shock-bolt", "drone-shot"] },
+  { "id": "digital-jelly", "name": "Digital Jelly", "kind": "minion", "stageId": "stage-4", "description": "A drifting data blob that splashes the whole party.", "baseStats": { "hp": 96, "energy": 28, "atk": 16, "def": 14, "mag": 18, "res": 14, "spd": 11, "move": 4 }, "attacks": ["Data Splash"], "skills": ["group-volley", "drone-shot"] },
+  { "id": "corrupted-priest", "name": "Corrupted Priest", "kind": "minion", "stageId": "stage-5", "description": "A choir cleric that mends its fellow constructs — strike it first.", "baseStats": { "hp": 90, "energy": 30, "atk": 13, "def": 14, "mag": 20, "res": 18, "spd": 13, "move": 3 }, "attacks": ["Mend Protocol"], "skills": ["mend-protocol", "drone-shot"] },
+  { "id": "corrupted-human", "name": "Corrupted Human", "kind": "minion", "stageId": "stage-6", "description": "A puppet-controlled survivor driven into a frenzy.", "baseStats": { "hp": 110, "energy": 18, "atk": 16, "def": 16, "mag": 8, "res": 12, "spd": 12, "move": 4 }, "attacks": ["Frenzy"], "skills": ["enrage", "servo-slam"] },
+  { "id": "data-guardian", "name": "Data Guardian", "kind": "minion", "stageId": "stage-7", "description": "A heavy fortress sentinel that grinds down armor.", "baseStats": { "hp": 170, "energy": 0, "atk": 28, "def": 28, "mag": 10, "res": 22, "spd": 9, "move": 3 }, "attacks": ["Corrupt Grind"], "skills": ["corrupt-strike", "servo-slam"] },
+  { "id": "guardian-of-regret", "name": "Guardian of Regret", "kind": "minion", "stageId": "stage-finale", "description": "A towering memory-construct that unleashes waves of sorrow.", "baseStats": { "hp": 150, "energy": 32, "atk": 30, "def": 22, "mag": 22, "res": 20, "spd": 14, "move": 4 }, "attacks": ["Sorrow Wave"], "skills": ["group-volley", "servo-slam"] },
+
+  { "id": "frost-wisp", "name": "Frost Wisp", "kind": "minion", "stageId": null, "description": "A glimmering shard-spirit that flash-freezes anything it touches.", "baseStats": { "hp": 92, "energy": 32, "atk": 14, "def": 10, "mag": 24, "res": 22, "spd": 16, "move": 4 }, "attacks": ["Frost Bolt"], "skills": ["shock-bolt", "glitch-field"] },
+  { "id": "glacier-husk", "name": "Glacier Husk", "kind": "minion", "stageId": null, "description": "An ice-encased unit, slow but near-unbreakable.", "baseStats": { "hp": 220, "energy": 22, "atk": 22, "def": 28, "mag": 8, "res": 18, "spd": 8, "move": 3 }, "attacks": ["Ice Crush"], "skills": ["servo-slam", "mech-smash"] },
+  { "id": "rime-drake", "name": "Rime Drake", "kind": "minion", "stageId": null, "description": "A frost-scaled drake that breathes a freezing data-storm.", "baseStats": { "hp": 168, "energy": 38, "atk": 26, "def": 18, "mag": 22, "res": 18, "spd": 15, "move": 4 }, "attacks": ["Frost Breath"], "skills": ["laser-beam", "group-volley"] },
+
+  { "id": "cinder-imp", "name": "Cinder Imp", "kind": "minion", "stageId": null, "description": "A darting ember-sprite that scatters burning packets.", "baseStats": { "hp": 74, "energy": 28, "atk": 18, "def": 10, "mag": 16, "res": 12, "spd": 19, "move": 5 }, "attacks": ["Ember Dart"], "skills": ["shock-bolt", "drone-swarm"] },
+  { "id": "forge-sentinel", "name": "Forge Sentinel", "kind": "minion", "stageId": null, "description": "A molten guardian that slams the ground into shrapnel.", "baseStats": { "hp": 270, "energy": 26, "atk": 30, "def": 32, "mag": 10, "res": 18, "spd": 9, "move": 3 }, "attacks": ["Hammer Slam"], "skills": ["core-burst", "ground-pound"] },
+  { "id": "magma-core", "name": "Magma Core", "kind": "minion", "stageId": null, "description": "An overheating reactor-spirit that erupts when enraged.", "baseStats": { "hp": 186, "energy": 44, "atk": 24, "def": 16, "mag": 30, "res": 22, "spd": 13, "move": 4 }, "attacks": ["Magma Surge"], "skills": ["core-burst", "arcane-circle", "enrage"] },
+
+  { "id": "drowned-unit", "name": "Drowned Unit", "kind": "minion", "stageId": null, "description": "A waterlogged machine that drags victims under with riptides.", "baseStats": { "hp": 144, "energy": 24, "atk": 20, "def": 18, "mag": 12, "res": 16, "spd": 11, "move": 3 }, "attacks": ["Riptide"], "skills": ["corrupt-strike", "servo-slam"] },
+  { "id": "tide-wraith", "name": "Tide Wraith", "kind": "minion", "stageId": null, "description": "A drifting archive-ghost that drowns minds and mends its kin.", "baseStats": { "hp": 116, "energy": 40, "atk": 12, "def": 12, "mag": 28, "res": 24, "spd": 15, "move": 4 }, "attacks": ["Drown"], "skills": ["code-bolt", "mend-protocol", "glitch-field"] },
+  { "id": "bog-leviath", "name": "Bog Leviath", "kind": "minion", "stageId": null, "description": "A colossal sunken serpent-construct lurking in the deep archive.", "baseStats": { "hp": 320, "energy": 30, "atk": 34, "def": 24, "mag": 18, "res": 20, "spd": 10, "move": 3 }, "attacks": ["Maw"], "skills": ["ground-pound", "group-volley"] },
+
+  { "id": "rust-hound", "name": "Rust Hound", "kind": "minion", "stageId": "stage-1", "description": "A village guard-bot gone feral, loping through the ruins and snapping at anything that still moves.", "baseStats": { "hp": 72, "energy": 0, "atk": 17, "def": 12, "mag": 5, "res": 9, "spd": 12, "move": 4 }, "attacks": ["Rust Bite"], "skills": ["servo-slam", "enrage"] },
+  { "id": "scrap-serpent", "name": "Scrap Serpent", "kind": "minion", "stageId": "stage-2", "description": "A serpent of welded rail-scrap that threads the tunnels, constricting and corroding whatever it catches.", "baseStats": { "hp": 90, "energy": 0, "atk": 20, "def": 14, "mag": 6, "res": 10, "spd": 11, "move": 4 }, "attacks": ["Scrap Coil"], "skills": ["servo-slam", "corrupt-strike"] },
+  { "id": "sapper-bot", "name": "Sapper Bot", "kind": "minion", "stageId": "stage-2", "description": "A demolition drone that lobs unstable charges, glitching armor and footing alike.", "baseStats": { "hp": 60, "energy": 24, "atk": 12, "def": 9, "mag": 16, "res": 10, "spd": 13, "move": 4 }, "attacks": ["Charge Lob"], "skills": ["drone-shot", "glitch-field"] },
+
+  { "id": "static-shade", "name": "Static Shade", "kind": "minion", "stageId": "stage-3", "description": "A ghost of deleted research, flickering between the consoles and lashing out with bursts of static.", "baseStats": { "hp": 80, "energy": 28, "atk": 13, "def": 12, "mag": 22, "res": 16, "spd": 14, "move": 4 }, "attacks": ["Static Burst"], "skills": ["shock-bolt", "group-volley"] },
+  { "id": "lab-sentinel", "name": "Lab Sentinel", "kind": "minion", "stageId": "stage-3", "description": "A heavy security construct still patrolling the research halls long after its makers were erased.", "baseStats": { "hp": 130, "energy": 20, "atk": 22, "def": 22, "mag": 10, "res": 16, "spd": 9, "move": 3 }, "attacks": ["Sentinel Slam"], "skills": ["servo-slam", "mech-smash"] },
+
+  { "id": "brine-eel", "name": "Brine Eel", "kind": "minion", "stageId": "stage-4", "description": "A coiling data-serpent that surges from the deep currents to drag the careless under.", "baseStats": { "hp": 98, "energy": 24, "atk": 22, "def": 15, "mag": 12, "res": 14, "spd": 13, "move": 4 }, "attacks": ["Undertow"], "skills": ["corrupt-strike", "group-volley"] },
+  { "id": "abyss-jelly", "name": "Abyss Jelly", "kind": "minion", "stageId": "stage-4", "description": "A pulsing blob of deep-ocean data that discharges over the whole party in a single cold flash.", "baseStats": { "hp": 100, "energy": 30, "atk": 16, "def": 14, "mag": 20, "res": 16, "spd": 11, "move": 4 }, "attacks": ["Deep Discharge"], "skills": ["group-volley", "drone-shot"] },
+
+  { "id": "hymn-spirit", "name": "Hymn Spirit", "kind": "minion", "stageId": "stage-5", "description": "A wisp of the Choir's song given form, mending its kin between verses of arcane sound.", "baseStats": { "hp": 94, "energy": 34, "atk": 15, "def": 16, "mag": 26, "res": 20, "spd": 14, "move": 3 }, "attacks": ["Resonant Verse"], "skills": ["arcane-circle", "mend-protocol"] },
+  { "id": "marble-golem", "name": "Marble Golem", "kind": "minion", "stageId": "stage-5", "description": "A cathedral idol animated by the hymn, bringing down stone fists with slow, crushing finality.", "baseStats": { "hp": 150, "energy": 0, "atk": 25, "def": 24, "mag": 8, "res": 18, "spd": 8, "move": 2 }, "attacks": ["Idol Crush"], "skills": ["servo-slam", "ground-pound"] },
+
+  { "id": "puppet-knight", "name": "Puppet Knight", "kind": "minion", "stageId": "stage-6", "description": "An armored marionette fighting with a dead soldier's drilled precision and none of his mercy.", "baseStats": { "hp": 140, "energy": 0, "atk": 27, "def": 22, "mag": 10, "res": 16, "spd": 10, "move": 3 }, "attacks": ["Strung Cleave"], "skills": ["servo-slam", "corrupt-strike"] },
+  { "id": "string-wraith", "name": "String Wraith", "kind": "minion", "stageId": "stage-6", "description": "A floating tangle of control-strings that jolts intruders and yanks the city's puppets into the fray.", "baseStats": { "hp": 100, "energy": 32, "atk": 16, "def": 16, "mag": 26, "res": 18, "spd": 14, "move": 4 }, "attacks": ["String Jolt"], "skills": ["shock-bolt", "group-volley"] },
+
+  { "id": "siege-golem", "name": "Siege Golem", "kind": "minion", "stageId": "stage-7", "description": "A fortress-class construct built to break walls, now turning that strength on anything that reaches the core.", "baseStats": { "hp": 180, "energy": 0, "atk": 30, "def": 28, "mag": 10, "res": 22, "spd": 9, "move": 3 }, "attacks": ["Siege Hammer"], "skills": ["ground-pound", "mech-smash"] },
+
+  { "id": "sorrow-spirit", "name": "Sorrow Spirit", "kind": "minion", "stageId": "stage-finale", "description": "A condensed knot of grief drifting the collapse, washing the battlefield in waves of arcane despair.", "baseStats": { "hp": 130, "energy": 34, "atk": 28, "def": 20, "mag": 26, "res": 20, "spd": 15, "move": 4 }, "attacks": ["Grief Wave"], "skills": ["arcane-circle", "group-volley"] },
+  { "id": "echo-stalker", "name": "Echo Stalker", "kind": "minion", "stageId": "stage-finale", "description": "A predator stitched from echoing memories, circling the party and lunging the instant they falter.", "baseStats": { "hp": 135, "energy": 0, "atk": 30, "def": 22, "mag": 14, "res": 18, "spd": 16, "move": 5 }, "attacks": ["Echo Pounce"], "skills": ["servo-slam", "enrage"] },
+
+  { "id": "ice-golem", "name": "Ice Golem", "kind": "minion", "stageId": null, "description": "A mountain of living frost that lumbers forward and brings glacial fists down like calving ice.", "baseStats": { "hp": 200, "energy": 0, "atk": 22, "def": 28, "mag": 10, "res": 20, "spd": 8, "move": 3 }, "attacks": ["Glacial Fist"], "skills": ["servo-slam", "ground-pound"] },
+  { "id": "rime-wisp", "name": "Rime Wisp", "kind": "minion", "stageId": null, "description": "A darting frost-mote that flash-freezes circuits and scrambles them with a brittle, crackling field.", "baseStats": { "hp": 90, "energy": 32, "atk": 14, "def": 12, "mag": 24, "res": 22, "spd": 16, "move": 4 }, "attacks": ["Rime Flash"], "skills": ["shock-bolt", "glitch-field"] },
+
+  { "id": "ember-drake", "name": "Ember Drake", "kind": "minion", "stageId": null, "description": "A forge-born drake wreathed in cinders, breathing searing beams and roaring itself into a frenzy.", "baseStats": { "hp": 170, "energy": 38, "atk": 27, "def": 18, "mag": 24, "res": 16, "spd": 14, "move": 4 }, "attacks": ["Cinder Breath"], "skills": ["laser-beam", "enrage"] },
+  { "id": "lava-imp", "name": "Lava Imp", "kind": "minion", "stageId": null, "description": "A skittering ember-sprite that flings molten motes in stinging, scattering swarms.", "baseStats": { "hp": 76, "energy": 28, "atk": 19, "def": 10, "mag": 16, "res": 12, "spd": 18, "move": 5 }, "attacks": ["Molten Fling"], "skills": ["shock-bolt", "drone-swarm"] },
+
+  { "id": "abyss-drake", "name": "Abyss Drake", "kind": "minion", "stageId": null, "description": "A sunken serpent-construct prowling the flooded archive, corroding hulls and swamping all who near.", "baseStats": { "hp": 180, "energy": 30, "atk": 28, "def": 20, "mag": 16, "res": 18, "spd": 12, "move": 4 }, "attacks": ["Abyssal Coil"], "skills": ["corrupt-strike", "group-volley"] },
+  { "id": "drowned-wisp", "name": "Drowned Wisp", "kind": "minion", "stageId": null, "description": "A drifting archive-ghost that drowns minds with code and stitches its waterlogged kin back together.", "baseStats": { "hp": 110, "energy": 38, "atk": 14, "def": 14, "mag": 26, "res": 22, "spd": 14, "move": 4 }, "attacks": ["Drowning Code"], "skills": ["code-bolt", "mend-protocol"] },
+
+  { "id": "breaker-husk", "name": "Breaker Husk", "kind": "minion", "stageId": "stage-1", "description": "A heavy demolition automaton left running in the ruins, bringing both fists down on anything that stirs.", "baseStats": { "hp": 92, "energy": 0, "atk": 18, "def": 15, "mag": 4, "res": 10, "spd": 8, "move": 3 }, "attacks": ["Wreck Slam"], "skills": ["servo-slam", "mech-smash"] },
+  { "id": "glint-drone", "name": "Glint Drone", "kind": "minion", "stageId": "stage-1", "description": "A skittish scavenger drone that darts the rubble and stings from a distance before fleeing.", "baseStats": { "hp": 56, "energy": 20, "atk": 11, "def": 8, "mag": 15, "res": 8, "spd": 14, "move": 4 }, "attacks": ["Glint Bolt"], "skills": ["drone-shot"] },
+
+  { "id": "tunnel-crawler", "name": "Tunnel Crawler", "kind": "minion", "stageId": "stage-2", "description": "A segmented rail-scavenger that threads the dark tunnels and corrodes whatever it coils around.", "baseStats": { "hp": 86, "energy": 0, "atk": 18, "def": 13, "mag": 5, "res": 9, "spd": 10, "move": 3 }, "attacks": ["Coil Crush"], "skills": ["servo-slam", "corrupt-strike"] },
+  { "id": "volt-sentry", "name": "Volt Sentry", "kind": "minion", "stageId": "stage-2", "description": "A trackside watch-drone that throws crackling arcs down the line at any trespasser.", "baseStats": { "hp": 62, "energy": 24, "atk": 12, "def": 9, "mag": 16, "res": 10, "spd": 13, "move": 4 }, "attacks": ["Arc Volley"], "skills": ["drone-shot", "shock-bolt"] },
+
+  { "id": "archive-sentinel", "name": "Archive Sentinel", "kind": "minion", "stageId": "stage-3", "description": "A hulking data-vault guardian that patrols the research halls, flattening intruders under armored fists.", "baseStats": { "hp": 128, "energy": 20, "atk": 22, "def": 22, "mag": 10, "res": 16, "spd": 9, "move": 3 }, "attacks": ["Vault Smash"], "skills": ["servo-slam", "mech-smash"] },
+  { "id": "null-shade", "name": "Null Shade", "kind": "minion", "stageId": "stage-3", "description": "A flickering ghost of purged data that lashes the whole party with bursts of corrupted static.", "baseStats": { "hp": 80, "energy": 28, "atk": 13, "def": 12, "mag": 22, "res": 16, "spd": 14, "move": 4 }, "attacks": ["Null Burst"], "skills": ["shock-bolt", "group-volley"] },
+
+  { "id": "current-eel", "name": "Current Eel", "kind": "minion", "stageId": "stage-4", "description": "A data-serpent riding the deep currents, striking from the dark before the riptide drags you under.", "baseStats": { "hp": 92, "energy": 0, "atk": 21, "def": 14, "mag": 8, "res": 13, "spd": 12, "move": 4 }, "attacks": ["Riptide Strike"], "skills": ["servo-slam", "corrupt-strike"] },
+  { "id": "tide-jelly", "name": "Tide Jelly", "kind": "minion", "stageId": "stage-4", "description": "A swelling bloom of ocean data that bursts over the whole party in a single cold wash.", "baseStats": { "hp": 98, "energy": 30, "atk": 16, "def": 14, "mag": 20, "res": 16, "spd": 11, "move": 4 }, "attacks": ["Tide Burst"], "skills": ["group-volley", "drone-shot"] },
+
+  { "id": "vault-seraph", "name": "Vault Seraph", "kind": "minion", "stageId": "stage-5", "description": "A cathedral guardian-statue woken by the hymn, descending with the slow, crushing weight of judgment.", "baseStats": { "hp": 124, "energy": 0, "atk": 23, "def": 20, "mag": 8, "res": 16, "spd": 8, "move": 2 }, "attacks": ["Judgment Drop"], "skills": ["servo-slam", "ground-pound"] },
+  { "id": "psalm-wisp", "name": "Psalm Wisp", "kind": "minion", "stageId": "stage-5", "description": "A mote of the Choir's song that mends its kin between arcane verses — silence it first.", "baseStats": { "hp": 92, "energy": 34, "atk": 15, "def": 16, "mag": 25, "res": 20, "spd": 14, "move": 3 }, "attacks": ["Mending Verse"], "skills": ["arcane-circle", "mend-protocol"] },
+
+  { "id": "lacquer-knight", "name": "Lacquer Knight", "kind": "minion", "stageId": "stage-6", "description": "A varnished marionette-soldier fighting with drilled, joint-cracking precision and no will of its own.", "baseStats": { "hp": 138, "energy": 0, "atk": 27, "def": 22, "mag": 10, "res": 16, "spd": 10, "move": 3 }, "attacks": ["Strung Cleave"], "skills": ["servo-slam", "corrupt-strike"] },
+  { "id": "signal-drone", "name": "Signal Drone", "kind": "minion", "stageId": "stage-6", "description": "A relay node that conducts the city's puppets and rakes intruders with synchronized fire.", "baseStats": { "hp": 72, "energy": 28, "atk": 14, "def": 12, "mag": 22, "res": 14, "spd": 14, "move": 4 }, "attacks": ["Signal Volley"], "skills": ["drone-shot", "group-volley"] },
+
+  { "id": "bulwark-legionnaire", "name": "Bulwark Legionnaire", "kind": "minion", "stageId": "stage-7", "description": "An armored line-holder of the inner fortress, built to absorb a siege and answer it with crushing blows.", "baseStats": { "hp": 150, "energy": 0, "atk": 28, "def": 25, "mag": 8, "res": 18, "spd": 9, "move": 3 }, "attacks": ["Bulwark Crush"], "skills": ["servo-slam", "ground-pound"] },
+  { "id": "turret-sentry", "name": "Turret Sentry", "kind": "minion", "stageId": "stage-7", "description": "A wall-mounted heavy turret that rains charged fire across the data vaults' approaches.", "baseStats": { "hp": 84, "energy": 30, "atk": 15, "def": 16, "mag": 25, "res": 18, "spd": 13, "move": 3 }, "attacks": ["Charged Salvo"], "skills": ["drone-shot", "shock-bolt"] },
+
+  { "id": "grief-stalker", "name": "Grief Stalker", "kind": "minion", "stageId": "stage-finale", "description": "A predator condensed from raw grief, circling the fading party and lunging the instant they waver.", "baseStats": { "hp": 134, "energy": 0, "atk": 30, "def": 22, "mag": 14, "res": 18, "spd": 16, "move": 5 }, "attacks": ["Grief Lunge"], "skills": ["servo-slam", "enrage"] },
+  { "id": "lament-wisp", "name": "Lament Wisp", "kind": "minion", "stageId": "stage-finale", "description": "A drifting knot of sorrow that washes the collapsing battlefield in waves of arcane despair.", "baseStats": { "hp": 96, "energy": 34, "atk": 16, "def": 16, "mag": 28, "res": 20, "spd": 15, "move": 4 }, "attacks": ["Lament Wave"], "skills": ["arcane-circle", "group-volley"] }
+]

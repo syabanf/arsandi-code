@@ -1,0 +1,31 @@
+[
+  { "id": "code-fragment", "name": "Code Fragment", "kind": "material", "description": "A shard of recovered world-code. Common crafting and upgrade material." },
+  { "id": "old-battery-pack", "name": "Old Battery Pack", "kind": "consumable", "description": "A salvaged cell. Restores a moderate amount of Code Energy." },
+  { "id": "iron-cpu", "name": "Iron CPU", "kind": "material", "description": "A rugged processing unit scavenged from a downed machine." },
+  { "id": "scrap-plating", "name": "Scrap Plating", "kind": "material", "description": "Battered armor plating torn from rail-fused machinery." },
+  { "id": "core-shard", "name": "Core Shard", "kind": "material", "description": "A sliver of an AI core, still faintly humming." },
+  { "id": "abyss-scale", "name": "Abyss Scale", "kind": "material", "description": "A scale of digital data, cold and impossibly heavy." },
+  { "id": "choir-relic", "name": "Choir Relic", "kind": "material", "description": "A relic resonating with seven merged voices." },
+  { "id": "atlas-core", "name": "Atlas Core", "kind": "key", "description": "The forbidden AI core ATLAS. A story-critical artifact." },
+  { "id": "code-crown", "name": "Code Crown", "kind": "key", "description": "A crown of sovereign code, mark of an AI ruler." },
+  { "id": "emperor-cipher", "name": "Emperor Cipher", "kind": "key", "description": "An encryption key to the deepest fortress vaults." },
+  { "id": "fragment-of-hope", "name": "Fragment of Hope", "kind": "key", "description": "The last spark of human hope, crystallized into code." },
+  { "id": "repair-kit", "name": "Repair Kit", "kind": "consumable", "description": "Restores a moderate amount of HP to one ally." },
+  { "id": "energy-cell", "name": "Energy Cell", "kind": "consumable", "description": "Restores Code Energy to one ally." },
+  { "id": "code-blade", "name": "Code Blade", "kind": "weapon", "description": "Saka's energy sword, forged from condensed world-code.", "equip": { "slot": "weapon", "user": "saka", "bonus": { "atk": 8 } } },
+  { "id": "code-staff", "name": "Code Staff", "kind": "weapon", "description": "Kara's ancient staff that channels code-energy spells.", "equip": { "slot": "weapon", "user": "kara", "bonus": { "mag": 8 } } },
+  { "id": "code-hammer", "name": "Code Hammer", "kind": "weapon", "description": "Zell's massive mechanical hammer, built for breaking machines.", "equip": { "slot": "weapon", "user": "zell", "bonus": { "atk": 10, "def": 4 } } },
+
+  { "id": "pulse-saber", "name": "Pulse Saber", "kind": "weapon", "description": "A humming blade that overclocks Saka's strikes.", "equip": { "slot": "weapon", "user": "saka", "bonus": { "atk": 16, "spd": 2 } } },
+  { "id": "oracle-rod", "name": "Oracle Rod", "kind": "weapon", "description": "A focusing rod that magnifies Kara's code-spells.", "equip": { "slot": "weapon", "user": "kara", "bonus": { "mag": 16, "res": 3 } } },
+  { "id": "siege-maul", "name": "Siege Maul", "kind": "weapon", "description": "A monstrous maul Zell swings to shatter cores.", "equip": { "slot": "weapon", "user": "zell", "bonus": { "atk": 18, "def": 6 } } },
+
+  { "id": "scrap-vest", "name": "Scrap Vest", "kind": "armor", "description": "Light salvaged plating. Modest protection.", "equip": { "slot": "armor", "bonus": { "def": 6, "hp": 20 } } },
+  { "id": "alloy-mail", "name": "Alloy Mail", "kind": "armor", "description": "Layered alloy mail that turns blades and bolts alike.", "equip": { "slot": "armor", "bonus": { "def": 12, "res": 6, "hp": 40 } } },
+  { "id": "aegis-core", "name": "Aegis Core", "kind": "armor", "description": "A reactive core-weave that hardens against any assault.", "equip": { "slot": "armor", "bonus": { "def": 18, "res": 12, "hp": 70 } } },
+
+  { "id": "power-chip", "name": "Power Chip", "kind": "accessory", "description": "Boosts offensive subroutines — raises ATK and MAG.", "equip": { "slot": "accessory", "bonus": { "atk": 6, "mag": 6 } } },
+  { "id": "guard-chip", "name": "Guard Chip", "kind": "accessory", "description": "Hardens defensive subroutines — raises DEF and RES.", "equip": { "slot": "accessory", "bonus": { "def": 8, "res": 8 } } },
+  { "id": "swift-chip", "name": "Swift Chip", "kind": "accessory", "description": "Overclocks reflexes — sharply raises SPD.", "equip": { "slot": "accessory", "bonus": { "spd": 8 } } },
+  { "id": "vitae-chip", "name": "Vitae Chip", "kind": "accessory", "description": "A life-sustaining loop — greatly raises max HP.", "equip": { "slot": "accessory", "bonus": { "hp": 90 } } }
+]

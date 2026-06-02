@@ -1,0 +1,83 @@
+[
+  {
+    "id": "saka",
+    "name": "Saka",
+    "title": "The Code Seeker",
+    "role": "physical-balanced",
+    "classId": "code-knight",
+    "weapon": "Code Blade",
+    "affinity": "code-energy",
+    "age": 17,
+    "heightCm": 170,
+    "themeColor": "#3d6bff",
+    "bio": "Main protagonist. Brave, emotional, and determined. Blue hair with a red scarf. Mysteriously connected to the world's core code.",
+    "baseStats": { "hp": 120, "energy": 40, "atk": 22, "def": 16, "mag": 10, "res": 12, "spd": 14, "move": 4 },
+    "skills": ["code-slash", "byte-impact", "glitch-step", "overwrite", "core-break"],
+    "passives": [
+      { "id": "code-sense", "name": "Code Sense", "description": "Critical-hit rate rises sharply while HP is low." },
+      { "id": "adaptive-learner", "name": "Adaptive Learner", "description": "Gains a small permanent stat boost after surviving tough battles." }
+    ],
+    "summon": "exeo",
+    "sprite": "sprite-saka",
+    "portrait": "portrait-saka",
+    "arts": [
+      { "name": "Twin Slash", "seq": ["up", "up"], "bonus": 0.2 },
+      { "name": "Edge Cross", "seq": ["left", "right"], "bonus": 0.22 },
+      { "name": "Override Drive", "seq": ["up", "left", "right"], "bonus": 0.55 }
+    ]
+  },
+  {
+    "id": "kara",
+    "name": "Kara",
+    "title": "The Code Wielder",
+    "role": "magic-support",
+    "classId": "code-mage",
+    "weapon": "Code Staff",
+    "affinity": "code-energy",
+    "age": 18,
+    "heightCm": 168,
+    "themeColor": "#b45cff",
+    "bio": "Saka's older sister. Calm, intelligent, and caring. Purple ponytail. Wields an ancient magic staff.",
+    "baseStats": { "hp": 95, "energy": 70, "atk": 11, "def": 12, "mag": 26, "res": 20, "spd": 13, "move": 3 },
+    "skills": ["code-bolt", "arcane-circle", "code-shield", "data-paralysis", "rewrite", "code-collapse"],
+    "passives": [
+      { "id": "code-mastery", "name": "Code Mastery", "description": "Increases magic critical rate and overall spell effectiveness." },
+      { "id": "ancient-insight", "name": "Ancient Insight", "description": "Support and debuff effects last longer." }
+    ],
+    "summon": "lumina",
+    "sprite": "sprite-kara",
+    "portrait": "portrait-kara",
+    "arts": [
+      { "name": "Mind Spark", "seq": ["down", "down"], "bonus": 0.2 },
+      { "name": "Hex Arc", "seq": ["left", "up"], "bonus": 0.22 },
+      { "name": "Data Lance", "seq": ["down", "left", "up"], "bonus": 0.55 }
+    ]
+  },
+  {
+    "id": "zell",
+    "name": "Zell",
+    "title": "The Code Engineer",
+    "role": "physical-tank",
+    "classId": "code-engineer",
+    "weapon": "Code Hammer",
+    "affinity": "code-tech",
+    "age": 17,
+    "heightCm": 180,
+    "themeColor": "#4dff9e",
+    "bio": "Childhood best friend. Funny and loyal. An engineer who fights with a massive mechanical hammer and wears goggles around his neck.",
+    "baseStats": { "hp": 150, "energy": 35, "atk": 24, "def": 22, "mag": 8, "res": 14, "spd": 9, "move": 3 },
+    "skills": ["mech-smash", "gear-shock", "repair-field", "magnet-pull", "overdrive", "core-burst"],
+    "passives": [
+      { "id": "tech-savant", "name": "Tech Savant", "description": "Deals bonus critical damage against machine-type enemies." },
+      { "id": "tinkerer", "name": "Tinkerer", "description": "Repair and item effects are more powerful." }
+    ],
+    "summon": "gigant",
+    "sprite": "sprite-zell",
+    "portrait": "portrait-zell",
+    "arts": [
+      { "name": "Piston Jab", "seq": ["right", "right"], "bonus": 0.2 },
+      { "name": "Gear Cross", "seq": ["down", "right"], "bonus": 0.22 },
+      { "name": "Crusher Drive", "seq": ["right", "down", "left"], "bonus": 0.55 }
+    ]
+  }
+]

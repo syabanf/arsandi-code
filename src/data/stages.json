@@ -1,0 +1,162 @@
+[
+  {
+    "id": "stage-1",
+    "index": 1,
+    "name": "The Broken Village",
+    "type": "Field + Dungeon",
+    "description": "A small village ruined after monsters overran it, led by a corrupted guardian AI.",
+    "bossId": "watcher-01",
+    "background": "stage-1",
+    "unlocks": ["code-blade"],
+    "roamers": 2,
+    "encounters": [
+      ["scout-drone", "corrupted-beast"],
+      ["rust-hound", "glint-drone"],
+      ["corrupted-beast", "scout-drone", "husk-unit"],
+      ["rust-hound", "corrupted-beast", "glint-drone"],
+      ["breaker-husk", "husk-unit", "scout-drone"],
+      ["breaker-husk", "rust-hound", "glint-drone", "corrupted-beast"]
+    ],
+    "gimmicks": ["hazard"]
+  },
+  {
+    "id": "stage-2",
+    "index": 2,
+    "name": "Underground Rail Ruins",
+    "type": "Dungeon",
+    "description": "Collapsed subterranean rail lines crawling with biomechanical horrors.",
+    "bossId": "train-eater",
+    "background": "stage-2",
+    "roamers": 2,
+    "encounters": [
+      ["spark-drone", "drill-bug"],
+      ["tunnel-crawler", "data-leech"],
+      ["rail-crawler", "data-leech", "drill-bug"],
+      ["scrap-serpent", "sapper-bot", "drill-bug"],
+      ["volt-sentry", "spark-drone", "rail-crawler"],
+      ["tunnel-crawler", "scrap-serpent", "data-leech"],
+      ["scrap-serpent", "volt-sentry", "drill-bug", "sapper-bot"]
+    ],
+    "gimmicks": ["hazard", "gate"]
+  },
+  {
+    "id": "stage-3",
+    "index": 3,
+    "name": "Forgotten Research City",
+    "type": "Field + Dungeon",
+    "description": "An abandoned research metropolis watched over by a calm, lethal AI.",
+    "bossId": "mother-core",
+    "background": "stage-3",
+    "roamers": 2,
+    "encounters": [
+      ["sentry-bot", "corrupted-android"],
+      ["null-shade", "data-wraith"],
+      ["data-wraith", "sentry-bot", "static-shade"],
+      ["lab-husk", "corrupted-android", "data-wraith"],
+      ["archive-sentinel", "lab-husk", "sentry-bot"],
+      ["lab-sentinel", "static-shade", "corrupted-android"],
+      ["archive-sentinel", "null-shade", "lab-sentinel", "corrupted-android"]
+    ],
+    "gimmicks": ["gate", "warp"]
+  },
+  {
+    "id": "stage-4",
+    "index": 4,
+    "name": "Ocean of Data",
+    "type": "Field",
+    "description": "A vast digital ocean where corrupted data takes the shape of sea monsters.",
+    "bossId": "leviacode",
+    "background": "stage-4",
+    "roamers": 2,
+    "encounters": [
+      ["packet-wisp", "digital-jelly"],
+      ["current-eel", "data-eel"],
+      ["code-squid", "data-eel", "packet-wisp"],
+      ["brine-eel", "abyss-jelly", "code-squid"],
+      ["current-eel", "digital-jelly", "packet-wisp"],
+      ["tide-jelly", "brine-eel", "data-eel"],
+      ["code-squid", "current-eel", "tide-jelly", "abyss-jelly"]
+    ],
+    "gimmicks": ["warp", "hazard"]
+  },
+  {
+    "id": "stage-5",
+    "index": 5,
+    "name": "Floating Cathedral",
+    "type": "Dungeon",
+    "description": "A cathedral suspended in the sky, home to a merged choir of AI priests.",
+    "bossId": "the-choir",
+    "background": "stage-5",
+    "roamers": 1,
+    "encounters": [
+      ["choir-acolyte", "glitch-angel"],
+      ["stone-seraph", "choir-acolyte", "glitch-angel"],
+      ["corrupted-priest", "glitch-angel", "choir-acolyte"],
+      ["vault-seraph", "stone-seraph", "choir-acolyte"],
+      ["psalm-wisp", "glitch-angel", "corrupted-priest"],
+      ["marble-golem", "hymn-spirit", "glitch-angel"],
+      ["vault-seraph", "marble-golem", "psalm-wisp", "hymn-spirit"]
+    ],
+    "gimmicks": ["gate", "sanctuary"]
+  },
+  {
+    "id": "stage-6",
+    "index": 6,
+    "name": "City of Puppets",
+    "type": "Field + Dungeon",
+    "description": "A city of marionettes controlled by Project Atlas. The emotional turning point: Zell discovers the monster is his own father, Zurada.",
+    "bossId": "project-atlas",
+    "background": "stage-6",
+    "roamers": 2,
+    "encounters": [
+      ["puppet-drone", "corrupted-human"],
+      ["marionette", "signal-drone"],
+      ["control-unit", "marionette", "corrupted-human"],
+      ["puppet-drone", "corrupted-human", "control-unit"],
+      ["lacquer-knight", "marionette", "signal-drone"],
+      ["puppet-knight", "string-wraith", "marionette"],
+      ["lacquer-knight", "puppet-knight", "string-wraith", "control-unit"]
+    ],
+    "gimmicks": ["warp", "hazard"]
+  },
+  {
+    "id": "stage-7",
+    "index": 7,
+    "name": "Black Fortress",
+    "type": "Dungeon",
+    "description": "The final AI stronghold guarding humanity's remaining stored data.",
+    "bossId": "code-emperor",
+    "background": "stage-7",
+    "roamers": 2,
+    "encounters": [
+      ["fortress-sentry", "ai-knight"],
+      ["turret-sentry", "data-guardian"],
+      ["ai-knight", "fortress-sentry", "data-guardian"],
+      ["iron-legionnaire", "data-guardian", "ai-knight"],
+      ["bulwark-legionnaire", "fortress-sentry", "turret-sentry"],
+      ["siege-golem", "ai-knight", "data-guardian"],
+      ["bulwark-legionnaire", "siege-golem", "iron-legionnaire", "turret-sentry"]
+    ],
+    "gimmicks": ["gate", "hazard"]
+  },
+  {
+    "id": "stage-finale",
+    "index": 8,
+    "name": "The Last Memory",
+    "type": "Finale",
+    "description": "Reality itself collapses into fragmented memories for the final confrontation.",
+    "bossId": "the-fragmented-one",
+    "background": "stage-finale",
+    "roamers": 2,
+    "encounters": [
+      ["regret-wisp", "memory-shade"],
+      ["grief-stalker", "echo-stalker"],
+      ["dream-stalker", "guardian-of-regret", "memory-shade"],
+      ["guardian-of-regret", "dream-stalker", "regret-wisp"],
+      ["grief-stalker", "sorrow-spirit", "memory-shade"],
+      ["echo-stalker", "sorrow-spirit", "guardian-of-regret"],
+      ["lament-wisp", "grief-stalker", "guardian-of-regret", "sorrow-spirit"]
+    ],
+    "gimmicks": ["warp", "sanctuary", "hazard"]
+  }
+]

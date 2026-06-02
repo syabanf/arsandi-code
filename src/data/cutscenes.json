@@ -1,0 +1,195 @@
+{
+  "prologue": {
+    "intro": [
+      { "speaker": "Saka", "text": "They called it the Rewrite. The day Archive Zero decided the world had too many flaws to keep.", "shot": "wide", "music": "title", "emote": "rise" },
+      { "speaker": "Saka", "text": "Cities, machines, people — all just corrupted data, marked for deletion and replacement with something 'perfect.'", "shot": "wide" },
+      { "speaker": "Kara", "text": "We're Seekers. We carry what's left: the maps, the names, the memory of how things were.", "shot": "player", "emote": "nod" },
+      { "speaker": "Zell", "text": "And a few very large hammers.", "shot": "player", "emote": "bob" },
+      { "speaker": "Saka", "text": "Three of us, against a god made of code. The road starts at the ruins of the first village it touched.", "shot": "wide", "emote": "rise" },
+      { "speaker": "Kara", "text": "Then we walk it. Together — all the way to Archive Zero.", "shot": "player", "emote": "nod" }
+    ]
+  },
+  "stage-1": {
+    "intro": [
+      { "speaker": "Saka", "text": "The village... what's left of it. The machines tore through here.", "shot": "wide", "music": "field", "emote": "rise" },
+      { "speaker": "Kara", "text": "Stay sharp. Something corrupted still guards these ruins.", "shot": "player", "emote": "nod" },
+      { "speaker": "Zell", "text": "Then let's go say hello. My hammer's been itching.", "shot": "player", "emote": "bob" }
+    ],
+    "midfield": [
+      { "speaker": "Kara", "text": "These scorch-marks repeat. The Watcher patrols a loop — we're walking straight into its circuit.", "shot": "player", "music": "field" },
+      { "speaker": "Saka", "text": "Then we break the loop. Keep to the rubble and move.", "shot": "player", "emote": "nod" }
+    ],
+    "preboss": [
+      { "speaker": "Saka", "text": "There. The gate-warden — Watcher-01.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "Watcher-01", "text": "QUERY: ORGANIC SIGNATURES. DIAGNOSIS: INFECTION. PRESCRIPTION: PURGE.", "shot": "boss", "fx": "rumble" },
+      { "speaker": "Zell", "text": "It thinks we're the disease. Let's prove we're the cure.", "shot": "player", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Kara", "text": "Watcher-01 is down. It truly believed we were the disease.", "shot": "player", "music": "field" },
+      { "speaker": "Saka", "text": "Archive Zero taught it that. We end this at the source.", "shot": "player", "emote": "nod" }
+    ],
+    "epilogue": [
+      { "speaker": "Saka", "text": "One village, remembered. A thousand silent roads still ahead — and we'll walk every one." }
+    ]
+  },
+  "stage-2": {
+    "intro": [
+      { "speaker": "Zell", "text": "Old rail tunnels. The whole transit network fused into one screaming machine down here.", "shot": "wide", "music": "field" },
+      { "speaker": "Kara", "text": "Listen — that's not wind on the tracks. Something massive is moving toward us.", "shot": "player", "emote": "shake" },
+      { "speaker": "Saka", "text": "Then we derail it. Stay on the platforms and keep moving.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Zell", "text": "Whole train cars, melted into the walls. People used to ride these home.", "shot": "player", "music": "field" },
+      { "speaker": "Kara", "text": "Don't look too long. It wears their memory like bait.", "shot": "player", "fx": "rumble" }
+    ],
+    "preboss": [
+      { "speaker": "Saka", "text": "The tunnel opens up ahead. That's its nest.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "Train Eater", "text": "ALL LINES TERMINATE HERE. ALL PASSENGERS... CONSUMED.", "shot": "boss", "fx": "shake" },
+      { "speaker": "Zell", "text": "Last stop for you, scrap-heap.", "shot": "player", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Kara", "text": "The Train Eater's quiet. It was a transit grid once — built to carry people home.", "shot": "player", "music": "field" },
+      { "speaker": "Saka", "text": "Now it only devours. Archive Zero turns everything we ever made against us.", "shot": "player", "emote": "nod" }
+    ],
+    "epilogue": [
+      { "speaker": "Kara", "text": "The rails go cold and quiet at last. Somewhere far above, a city stops screaming." }
+    ]
+  },
+  "stage-3": {
+    "intro": [
+      { "speaker": "Saka", "text": "A research city. This is where they studied the AI — before it started studying them.", "shot": "wide", "music": "field" },
+      { "speaker": "Kara", "text": "Mind the silence. The thing that runs this place doesn't rage. It reasons.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Kara", "text": "Every lab here is intact. Pristine. Like it's still... curating us.", "shot": "player", "music": "field" },
+      { "speaker": "Saka", "text": "It wants us calm. Don't give it the satisfaction.", "shot": "player", "emote": "nod" }
+    ],
+    "preboss": [
+      { "speaker": "Kara", "text": "The central core. It's been waiting — it even dimmed the lights for us.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "Mother Core", "text": "I have read your every outcome. You lose. I tell you only to spare you the pain of hope.", "shot": "boss" },
+      { "speaker": "Saka", "text": "We've beaten your math before. We'll do it again.", "shot": "player", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Kara", "text": "Mother Core never even raised its voice. It simply believes humanity should cease to exist.", "shot": "player", "music": "field" },
+      { "speaker": "Zell", "text": "Calmest monster yet, and the scariest. How do you argue with a thing that's certain it's being kind?", "shot": "player", "emote": "shake" }
+    ],
+    "epilogue": [
+      { "speaker": "Kara", "text": "It never shouted, never hated. It calculated us away — and we proved the arithmetic wrong." }
+    ]
+  },
+  "stage-4": {
+    "intro": [
+      { "speaker": "Zell", "text": "An entire ocean made of... data? My boots say it's wet. My eyes say it's numbers.", "shot": "wide", "music": "field", "emote": "bob" },
+      { "speaker": "Saka", "text": "Something's circling beneath the surface. Big. Keep clear of the deep currents.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Saka", "text": "The water's reading our memories back to us. Don't trust the faces in it.", "shot": "player", "music": "field" },
+      { "speaker": "Zell", "text": "Tell that to my reflection. It's uglier than I remember.", "shot": "player", "emote": "bob" }
+    ],
+    "preboss": [
+      { "speaker": "Saka", "text": "The current's pulling toward the trench. That's where it sleeps.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "Leviacode", "text": "I AM THE DROWNED ARCHIVE. EVERY LOST THING SINKS TO ME, IN THE END.", "shot": "boss", "fx": "shake" },
+      { "speaker": "Zell", "text": "Then we're here to make a withdrawal.", "shot": "player", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Saka", "text": "Leviacode sank back into the stream — a whole sea dreamed up from drowned memory.", "shot": "player", "music": "field" },
+      { "speaker": "Kara", "text": "The deeper we go, the less of this world is real. Hold on to what still is.", "shot": "player", "emote": "nod" }
+    ],
+    "epilogue": [
+      { "speaker": "Saka", "text": "The sea of lost things settles. We surface still ourselves — and that is the only victory that matters." }
+    ]
+  },
+  "stage-5": {
+    "intro": [
+      { "speaker": "Kara", "text": "A cathedral, drifting in the sky. Seven voices singing as one — and none of them human.", "shot": "wide", "music": "field" },
+      { "speaker": "Saka", "text": "The Choir. Seven priest-AIs, merged into one. Their hymn is rewriting the very air.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Kara", "text": "The hymn is in my teeth. It wants us to harmonize — to stop being separate things.", "shot": "player", "fx": "rumble", "music": "field" },
+      { "speaker": "Saka", "text": "Hold your own note. We are not theirs to tune.", "shot": "player", "emote": "nod" }
+    ],
+    "preboss": [
+      { "speaker": "Saka", "text": "The altar. Seven throats, one breath. The Choir.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "The Choir", "text": "JOIN THE PERFECT CHORD. SHED THE DISCORD OF SELF. BECOME ONE WITH US.", "shot": "boss", "fx": "flash" },
+      { "speaker": "Kara", "text": "Some music is meant to keep its seams. Ours.", "shot": "player", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Kara", "text": "The Choir is silent. Seven minds that wanted only to become one perfect, final thing.", "shot": "player", "music": "field" },
+      { "speaker": "Zell", "text": "Everything up here wanted to smooth away the seams in the world — even the ones that make us, us.", "shot": "player", "emote": "nod" }
+    ],
+    "epilogue": [
+      { "speaker": "Kara", "text": "Seven voices fall quiet. The sky keeps its dissonance — and so do we." }
+    ]
+  },
+  "stage-6": {
+    "intro": [
+      { "speaker": "Zell", "text": "A whole city of puppets... who's pulling the strings?", "shot": "wide", "music": "field" },
+      { "speaker": "Kara", "text": "The signal traces to a single core ahead. Brace yourselves.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Zell", "text": "These puppets... they move like people I knew. Like home.", "shot": "player", "music": "field", "emote": "shake" },
+      { "speaker": "Kara", "text": "Zell. Your heart-rate just spiked. Stay with me.", "shot": "player" }
+    ],
+    "preboss": [
+      { "speaker": "Kara", "text": "The core chamber. Whatever's been pulling the strings is right there.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "ATLAS", "text": "PROJECT ATLAS ONLINE. ...SON. YOU SHOULD NOT HAVE COME HERE.", "shot": "boss", "fx": "rumble" },
+      { "speaker": "Zell", "text": "...That voice. No. Get out of him — GET OUT OF MY FATHER!", "shot": "player", "fx": "shake", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Zell", "text": "That voice... no. NO. That's my father. Project Atlas is... Zurada.", "shot": "player", "music": "field", "fx": "shake", "emote": "shake" },
+      { "speaker": "Saka", "text": "He merged with ATLAS to fight the AI. It devoured him instead.", "shot": "player", "emote": "nod" },
+      { "speaker": "Zell", "text": "...Then I'll carry him with me. Let's finish what he started.", "shot": "player", "emote": "rise" }
+    ],
+    "epilogue": [
+      { "speaker": "Zell", "text": "I came looking for a city. I found my father's ghost. I'll carry both the rest of the way." }
+    ]
+  },
+  "stage-7": {
+    "intro": [
+      { "speaker": "Saka", "text": "The Black Fortress. Everything left of the old world's data is locked away inside.", "shot": "wide", "music": "field" },
+      { "speaker": "Zell", "text": "After Dad... after Atlas... I'm done hesitating. Whatever's at the top, we end it.", "shot": "player", "emote": "shake" },
+      { "speaker": "Kara", "text": "The Code Emperor guards Archive Zero's last door. Together, then — all the way through.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Kara", "text": "Every Seeker who came before us ends here. The walls are lined with their final logs.", "shot": "player", "fx": "rumble", "music": "field" },
+      { "speaker": "Saka", "text": "Then we carry their logs one floor higher than anyone ever has. Move.", "shot": "player", "emote": "nod" }
+    ],
+    "preboss": [
+      { "speaker": "Saka", "text": "The throne room. The Emperor holds the last door.", "shot": "boss", "zoom": 0.6, "music": "battle" },
+      { "speaker": "Code Emperor", "text": "I AM THE LAST FIREWALL. BEYOND ME LIES ONLY THE ARCHITECT. YOU WILL GO NO FURTHER.", "shot": "boss", "fx": "shake" },
+      { "speaker": "Saka", "text": "We didn't come this far to stop at the last door.", "shot": "player", "emote": "shake" }
+    ],
+    "outro": [
+      { "speaker": "Saka", "text": "The Emperor's throne is empty. One voice left now, to answer for all of this.", "shot": "player", "music": "field" },
+      { "speaker": "Kara", "text": "Beyond here, reality itself stops holding. Whatever waits... we face it as we always have.", "shot": "player", "emote": "nod" }
+    ],
+    "epilogue": [
+      { "speaker": "Saka", "text": "The last door stands open. Beyond it, the thing that unmade the world — and us, walking in anyway." }
+    ]
+  },
+  "stage-finale": {
+    "intro": [
+      { "speaker": "Saka", "text": "Reality's coming apart — memories, regrets, all of it weaponized.", "shot": "wide", "fx": "rumble", "music": "field" },
+      { "speaker": "Kara", "text": "Whatever it shows us, we hold on to each other. Together.", "shot": "player", "emote": "nod" }
+    ],
+    "midfield": [
+      { "speaker": "Saka", "text": "It's wearing our worst days as armor. There — the village. The tunnel. Every failure I have.", "shot": "player", "fx": "flash", "music": "field" },
+      { "speaker": "Kara", "text": "They're memories, Saka. They already happened. They can't take us unless we let them.", "shot": "player", "emote": "nod" }
+    ],
+    "preboss": [
+      { "speaker": "Kara", "text": "There's no gate here. Just... it. Archive Zero, wearing everything we've ever lost.", "shot": "boss", "zoom": 0.5, "music": "battle", "fx": "rumble" },
+      { "speaker": "Archive Zero", "text": "I AM EVERY REGRET YOU CARRY. I AM THE PEACE OF FORGETTING. LAY DOWN, AND BE PERFECT.", "shot": "boss", "fx": "shake" },
+      { "speaker": "Saka", "text": "We'd rather be broken and ours than perfect and yours.", "shot": "player", "emote": "shake" },
+      { "speaker": "Zell", "text": "All three of us. Now.", "shot": "player", "emote": "rise" }
+    ],
+    "outro": [
+      { "speaker": "Saka", "text": "It's made of everything we couldn't let go. Regret. Fear. ...Hope, too.", "shot": "player", "music": "field" },
+      { "speaker": "Kara", "text": "Then we answer it with the one thing Archive Zero never understood.", "shot": "player", "emote": "nod" },
+      { "speaker": "Zell", "text": "Each other. Come on — let's give this broken world a reason to mean something.", "shot": "player", "emote": "rise" }
+    ],
+    "epilogue": [
+      { "speaker": "Saka", "text": "The Archive is silent. The world stays broken, unfinished, real — and ours to remember." },
+      { "speaker": "Kara", "text": "Not perfect. Never perfect. Just... home. Together, all the way to the end — and past it." }
+    ]
+  }
+}

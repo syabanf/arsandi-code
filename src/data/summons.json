@@ -1,0 +1,56 @@
+[
+  {
+    "id": "exeo",
+    "name": "Exeo, the Code Dragon",
+    "owner": "saka",
+    "ultimate": "Code Cataclysm",
+    "element": "code-energy",
+    "color": "#3d6bff",
+    "power": 72,
+    "effect": { "damageAll": true },
+    "silhouette": "dragon",
+    "description": "The first being ever born from raw Code. A dragon of immense destructive power that resonates with Saka's connection to the world's core.",
+    "comboSlots": 5,
+    "arts": [
+      { "name": "Twin Fang", "seq": ["up", "up"], "bonus": 0.25 },
+      { "name": "Spiral Talon", "seq": ["left", "right", "down"], "bonus": 0.45 },
+      { "name": "Code Cataclysm", "seq": ["up", "up", "left", "right", "down"], "bonus": 1.15 }
+    ]
+  },
+  {
+    "id": "lumina",
+    "name": "Lumina, the Code Oracle",
+    "owner": "kara",
+    "ultimate": "Oracle's Reckoning",
+    "element": "code-energy",
+    "color": "#b45cff",
+    "power": 52,
+    "effect": { "damageAll": true, "healParty": 64, "cleanse": true },
+    "silhouette": "oracle",
+    "description": "An ancient entity of code that judges corruption. Lumina amplifies Kara's magic and passes sentence on the unworthy.",
+    "comboSlots": 5,
+    "arts": [
+      { "name": "Mind Veil", "seq": ["down", "down"], "bonus": 0.25 },
+      { "name": "Sacred Arc", "seq": ["left", "up", "right"], "bonus": 0.45 },
+      { "name": "Oracle's Reckoning", "seq": ["down", "down", "left", "up", "right"], "bonus": 1.15 }
+    ]
+  },
+  {
+    "id": "gigant",
+    "name": "Gigant, the Code Colossus",
+    "owner": "zell",
+    "ultimate": "Colossal Breaker",
+    "element": "code-tech",
+    "color": "#4dff9e",
+    "power": 104,
+    "effect": { "damageSingle": true, "defBreak": true, "shieldParty": 34, "partyBuff": ["def-up"] },
+    "silhouette": "colossus",
+    "description": "A towering mechanical colossus forged from old-world code. Embodies overwhelming defense and raw breaking force.",
+    "comboSlots": 5,
+    "arts": [
+      { "name": "Iron Jab", "seq": ["right", "right"], "bonus": 0.25 },
+      { "name": "Quake Step", "seq": ["down", "left", "down"], "bonus": 0.45 },
+      { "name": "Colossal Breaker", "seq": ["right", "right", "down", "left", "down"], "bonus": 1.15 }
+    ]
+  }
+]
