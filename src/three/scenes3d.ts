@@ -219,6 +219,11 @@ export class Game3D {
     // Floating party/status button (and the [P] shortcut) open the character sheet.
     this.ui.onCharButton = () => this.openCharSheet();
     this.ui.onCharKey = () => this.openCharSheet();
+    // On-screen touch controls (mobile) drive the same World3D actions as the keyboard.
+    this.ui.onTouchMove = (x, z) => this.world.setMoveVector(x, z);
+    this.ui.onTouchInteract = () => this.world.pressInteract();
+    this.ui.onTouchMenu = () => this.openPause();
+    this.ui.onTouchMount = () => this.world.toggleMount();
   }
 
   // exposed for headless verification (frame-pumping)
@@ -295,6 +300,7 @@ export class Game3D {
   private async goToWorld(): Promise<void> {
     this.currentDungeonId = null;
     await this.world.loadMap("world");
+    this.resetSceneUi();
     this.world.start();
     this.ui.setCharButtonEnabled(true);
     audio.playMusic("field");
@@ -303,7 +309,7 @@ export class Game3D {
     this.syncGold();
     this.refreshPartyHud();
 
-    this.world.setCanMount(true);
+    this.world.setCanMount(true); this.ui.setMountButton(true);
     this.ui.setHint("Arrows/WASD move · [E] enter · [C] chocobo · [Esc] menu");
 
     const [hx, hy] = WORLD_LAYOUT.home;
@@ -386,8 +392,9 @@ export class Game3D {
     const d = DUNGEONS.find((x) => x.id === dungeonId);
     if (!d) { await this.goToWorld(); return; }
     this.currentDungeonId = d.id;
-    this.world.setCanMount(false);
+    this.world.setCanMount(false); this.ui.setMountButton(false);
     await this.world.loadMap(d.id);
+    this.resetSceneUi();
     this.world.start();
     this.ui.setCharButtonEnabled(true);
     audio.playMusic("field");
@@ -437,8 +444,9 @@ export class Game3D {
 
   private async goToTown(): Promise<void> {
     this.currentDungeonId = null;
-    this.world.setCanMount(false);
+    this.world.setCanMount(false); this.ui.setMountButton(false);
     await this.world.loadMap("town");
+    this.resetSceneUi();
     this.world.start();
     this.ui.setCharButtonEnabled(true);
     audio.playMusic("town");
@@ -498,8 +506,9 @@ export class Game3D {
 
   private async goToTradeTown(): Promise<void> {
     this.currentDungeonId = null;
-    this.world.setCanMount(false);
+    this.world.setCanMount(false); this.ui.setMountButton(false);
     await this.world.loadMap("town2");
+    this.resetSceneUi();
     this.world.start();
     this.ui.setCharButtonEnabled(true);
     audio.playMusic("town");
@@ -540,8 +549,9 @@ export class Game3D {
   private async goToField(stageId: string): Promise<void> {
     this.currentStage = stageId;
     this.currentDungeonId = null;
-    this.world.setCanMount(false);
+    this.world.setCanMount(false); this.ui.setMountButton(false);
     await this.world.loadMap(stageId);
+    this.resetSceneUi();
     this.world.start();
     this.ui.setCharButtonEnabled(true);
     audio.playMusic("field");
@@ -620,6 +630,14 @@ export class Game3D {
 
   // ---- cutscene director ------------------------------------------------
 
+  // Clear any lingering cutscene presentation (letterbox + dialogue) so a stale
+  // cinematic overlay from an interrupted scene can never bleed onto a freshly
+  // loaded scene. Idempotent — safe to call when no cutscene is active.
+  private resetSceneUi(): void {
+    this.ui.hideCine();
+    this.ui.setLetterbox(false);
+  }
+
   private delay(ms: number): Promise<void> {
     return new Promise((r) => setTimeout(r, ms));
   }
@@ -684,16 +702,29 @@ export class Game3D {
   // First-visit opening: settle the fade-in, play the one-time prologue, show
   // the chapter title card, then the chapter intro exchange.
   private async playFieldIntro(stage: StageData): Promise<void> {
+    // Hold the field still for the whole opening (fade-settle → prologue → title
+    // card → intro) so the player can't walk, trip an encounter, or get caught by
+    // a roaming monster mid-opening. `token` lets us bail if the player has left
+    // this field by the time a delay resolves (stale fire-and-forget coroutine).
+    const token = this.world.sceneToken;
+    const stillHere = () => this.world.sceneToken === token;
+    this.world.setLocked(true);
     await this.delay(650);
+    if (!stillHere()) return;
     if (!runState.hasSeenScene("prologue")) {
       runState.markScene("prologue");
       const pro = prologuePages();
       if (pro) await this.playPrologue(pro);
+      if (!stillHere()) return;
     }
+    this.world.setLocked(true); // playCutscene unlocks on exit — re-assert for the card
     this.ui.showCard(`CHAPTER ${stage.index}`, stage.name, 1500);
     await this.delay(1500);
+    if (!stillHere()) return;
     const intro = cutscenePages(stage.id, "intro");
     if (intro) await this.playCutscene(intro, { boss: [30, 15] });
+    if (!stillHere()) return;
+    this.world.setLocked(false); // hand control back (also covers a missing-intro chapter)
   }
 
   // The opening prologue — the three Seekers stand together at the ruins as the

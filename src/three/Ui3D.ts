@@ -102,6 +102,25 @@ const CSS = `
 .u3d .charbtn .g{font-family:'Cinzel',serif;font-size:22px;line-height:1;text-shadow:0 0 10px rgba(244,213,141,.6);}
 .u3d .charbtn .cap{font-family:'Cinzel',serif;font-size:8px;letter-spacing:1.5px;color:#cdbcff;}
 @keyframes u3dGlow{50%{box-shadow:0 6px 20px #000a, inset 0 0 16px rgba(150,130,240,.5), 0 0 20px rgba(244,213,141,.4);}}
+/* ---- on-screen touch controls (mobile) ---- */
+.u3d .touch{position:absolute;inset:0;pointer-events:none;z-index:11;}
+.u3d .tj{position:absolute;left:0;bottom:0;width:46%;height:58%;pointer-events:auto;touch-action:none;}
+.u3d .tj-base{position:absolute;width:124px;height:124px;margin:-62px 0 0 -62px;border-radius:50%;display:none;
+  background:radial-gradient(circle,rgba(40,30,74,.34),rgba(16,11,34,.18));border:2px solid rgba(214,182,122,.5);
+  box-shadow:0 0 18px rgba(122,104,210,.3), inset 0 0 18px rgba(122,104,210,.25);pointer-events:none;}
+.u3d .tj-knob{position:absolute;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;display:none;pointer-events:none;
+  background:radial-gradient(circle at 38% 30%,rgba(244,213,141,.95),rgba(150,110,40,.92));
+  border:1px solid rgba(255,236,180,.9);box-shadow:0 4px 14px #000a, 0 0 18px rgba(244,213,141,.6);}
+.u3d .tb{position:absolute;width:62px;height:62px;border-radius:50%;pointer-events:auto;touch-action:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;-webkit-user-select:none;user-select:none;
+  background:radial-gradient(circle at 38% 30%,rgba(58,44,108,.96),rgba(16,11,34,.98));
+  border:1px solid rgba(214,182,122,.8);color:#f4d58d;font-family:'Cinzel',serif;
+  box-shadow:0 6px 20px #000a, inset 0 0 14px rgba(122,104,210,.35), 0 0 14px rgba(244,213,141,.22);
+  transition:transform .08s ease, box-shadow .08s ease;}
+.u3d .tb:active{transform:scale(.9);box-shadow:0 3px 10px #000c, inset 0 0 20px rgba(160,140,255,.6), 0 0 22px rgba(244,213,141,.6);}
+.u3d .tb-a{right:84px;bottom:62px;width:72px;height:72px;font-size:26px;font-weight:700;}
+.u3d .tb-menu{right:18px;bottom:140px;font-size:24px;}
+.u3d .tb-mount{right:90px;bottom:144px;font-size:11px;letter-spacing:1px;}
 /* ---- character sheet (status + inline equip) ---- */
 .u3d .sheet{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
   width:min(540px,92vw);max-height:88vh;overflow-y:auto;padding:16px 18px 12px;pointer-events:auto;
@@ -207,6 +226,21 @@ const CSS = `
 .u3d .epi .epi-t span{display:block;opacity:0;animation:emRise 1s ease forwards;}
 .u3d .epi .epi-s{font-family:'Cinzel',serif;font-size:14px;letter-spacing:3px;color:#f4d58d;animation:u3dblink 1.8s infinite;}
 .u3d .epi.on{opacity:1;}
+/* ---- responsive: phones / touch ---- */
+@media (max-width: 680px), (pointer: coarse) {
+  .u3d .top{font-size:12px;padding:8px 12px;}
+  .u3d .loc{font-size:12px;letter-spacing:1px;}
+  .u3d .gold{font-size:13px;}
+  .u3d .hint{display:none;}
+  .u3d .dialog{left:3%;right:3%;bottom:14px;padding:12px 14px;min-height:58px;}
+  .u3d .dialog .bd{font-size:15px;line-height:1.45;}
+  .u3d .dialog .por{width:54px;height:54px;}
+  .u3d .menu{min-width:0;width:90%;max-width:none;}
+  .u3d .row{font-size:15px;padding:10px 12px;}
+  .u3d .card .t{font-size:30px;letter-spacing:2px;}
+  .u3d .card .s{font-size:14px;}
+  .u3d .epi .epi-t{font-size:18px;line-height:1.6;}
+}
 `;
 
 export class Ui3D {
@@ -262,6 +296,20 @@ export class Ui3D {
   onCharButton: () => void = () => {};
   onCharKey: () => void = () => {};
 
+  // ---- touch controls (mobile) — wired by the scene controller to World3D ----
+  onTouchMove: (x: number, z: number) => void = () => {};
+  onTouchInteract: () => void = () => {};
+  onTouchMenu: () => void = () => {};
+  onTouchMount: () => void = () => {};
+  private touchEl?: HTMLDivElement;
+  private joyBase?: HTMLElement;
+  private joyKnob?: HTMLElement;
+  private joyId = -1;
+  private joyOX = 0;
+  private joyOY = 0;
+  private touchEnabled = false;
+  private mountAvailable = false;
+
   constructor(parent: HTMLElement = document.body) {
     const style = document.createElement("style");
     style.textContent = CSS;
@@ -277,6 +325,12 @@ export class Ui3D {
       <div class="panel menu" style="display:none"></div>
       <div class="panel sheet" style="display:none"></div>
       <div class="charbtn" title="Party & Equipment (P)"><span class="g">&#10070;</span><span class="cap">PARTY</span></div>
+      <div class="touch" style="display:none">
+        <div class="tj"><div class="tj-base"></div><div class="tj-knob"></div></div>
+        <div class="tb tb-a" title="Interact">A</div>
+        <div class="tb tb-menu" title="Menu">&#9776;</div>
+        <div class="tb tb-mount" title="Chocobo" style="display:none">RIDE</div>
+      </div>
       <div class="card"><div class="t"></div><div class="s"></div></div>
       <div class="cinebars"><div class="cb cb-t"></div><div class="cb cb-b"></div></div>
       <div class="cine"><img class="cpor cpor-l"><div class="panel cbox"><div class="csp"></div><div class="cbd"></div><div class="cnx">▼</div></div><img class="cpor cpor-r"></div>
@@ -306,6 +360,7 @@ export class Ui3D {
       this.onCharButton();
     });
     this.refreshCharBtn();
+    this.initTouch();
     window.addEventListener("keydown", (e) => this.onKey(e));
   }
 
@@ -321,6 +376,7 @@ export class Ui3D {
   private syncModal(): void {
     this.onModalChange(this.isModalOpen());
     this.refreshCharBtn();
+    this.syncTouch();
   }
   private refreshCharBtn(): void {
     this.charBtnEl.style.display = (this.charBtnEnabled && !this.isModalOpen()) ? "flex" : "none";
@@ -330,8 +386,71 @@ export class Ui3D {
   setCharButtonEnabled(on: boolean): void {
     this.charBtnEnabled = on;
     this.refreshCharBtn();
+    this.syncTouch();
   }
   isSheetOpen(): boolean { return this.sheetEl.style.display !== "none"; }
+
+  // ---- on-screen touch controls (mobile) --------------------------------
+  // Build the joystick + button wiring. The layer only appears on touch
+  // devices (coarse pointer), or when forced with ?touch=1 / setTouchControls.
+  private initTouch(): void {
+    this.touchEl = this.q(".touch");
+    this.joyBase = this.root.querySelector(".tj-base") as HTMLElement;
+    this.joyKnob = this.root.querySelector(".tj-knob") as HTMLElement;
+    const coarse = typeof window.matchMedia === "function" && window.matchMedia("(pointer: coarse)").matches;
+    const forced = new URLSearchParams(location.search).has("touch");
+    this.touchEnabled = coarse || forced;
+
+    const tj = this.root.querySelector(".tj") as HTMLElement;
+    const R = 56;
+    tj.addEventListener("pointerdown", (e) => {
+      e.preventDefault();
+      this.joyId = e.pointerId; this.joyOX = e.clientX; this.joyOY = e.clientY;
+      try { tj.setPointerCapture(e.pointerId); } catch { /* ignore */ }
+      for (const n of [this.joyBase!, this.joyKnob!]) { n.style.left = `${e.clientX}px`; n.style.top = `${e.clientY}px`; n.style.display = "block"; }
+    });
+    tj.addEventListener("pointermove", (e) => {
+      if (this.joyId !== e.pointerId) return;
+      let dx = e.clientX - this.joyOX, dy = e.clientY - this.joyOY;
+      const d = Math.hypot(dx, dy);
+      if (d > R) { dx = (dx / d) * R; dy = (dy / d) * R; }
+      this.joyKnob!.style.left = `${this.joyOX + dx}px`; this.joyKnob!.style.top = `${this.joyOY + dy}px`;
+      this.onTouchMove(dx / R, dy / R); // up (dy<0) = forward, matches W/↑
+    });
+    const end = (e: PointerEvent) => { if (this.joyId === e.pointerId) this.endJoystick(); };
+    tj.addEventListener("pointerup", end);
+    tj.addEventListener("pointercancel", end);
+
+    const btn = (sel: string, fn: () => void) =>
+      (this.root.querySelector(sel) as HTMLElement).addEventListener("pointerdown", (e) => { e.preventDefault(); fn(); });
+    btn(".tb-a", () => this.onTouchInteract());
+    btn(".tb-menu", () => this.onTouchMenu());
+    btn(".tb-mount", () => this.onTouchMount());
+    this.syncTouch();
+  }
+  private endJoystick(): void {
+    this.joyId = -1;
+    if (this.joyBase) this.joyBase.style.display = "none";
+    if (this.joyKnob) this.joyKnob.style.display = "none";
+    this.onTouchMove(0, 0);
+  }
+  // Controls show only during free exploration (same gate as the PARTY button):
+  // hidden in battle, dialogs, menus, sheets, cutscenes, and the title screen.
+  private syncTouch(): void {
+    if (!this.touchEl) return;
+    // Use computed display: the cine/epi panels are hidden via CSS (inline style
+    // is "" until a cutscene runs), so an inline-style check would misread them.
+    const shown = (e: HTMLElement) => getComputedStyle(e).display !== "none";
+    const overlay = this.isModalOpen() || shown(this.cineEl) || shown(this.epiEl);
+    const show = this.touchEnabled && this.charBtnEnabled && !overlay;
+    this.touchEl.style.display = show ? "block" : "none";
+    (this.root.querySelector(".tb-mount") as HTMLElement).style.display = this.mountAvailable ? "flex" : "none";
+    if (!show) this.endJoystick();
+  }
+  // Force the touch layer on/off (e.g. an options toggle); auto-detected otherwise.
+  setTouchControls(on: boolean): void { this.touchEnabled = on; this.syncTouch(); }
+  // Show/hide the chocobo button as mounting becomes available per scene.
+  setMountButton(on: boolean): void { this.mountAvailable = on; this.syncTouch(); }
 
   // ---- HUD --------------------------------------------------------------
   setLocation(t: string): void { this.locEl.textContent = t; }
@@ -506,6 +625,7 @@ export class Ui3D {
   // Resolves when the player advances (Enter/Space/E/click).
   cineLine(page: DialogPage): Promise<void> {
     this.cineEl.style.display = "flex";
+    this.syncTouch();
     const side = this.applyCineSpeaker(page);
     this.cnxEl.style.display = "none";
     this.cineLock = performance.now() + 130;
@@ -524,6 +644,7 @@ export class Ui3D {
     this.cspEl.textContent = ""; this.cbdEl.textContent = "";
     this.cineSides = {}; this.cineNextSide = "l";
     this.cineResolve = undefined;
+    this.syncTouch();
   }
 
   // Assigns the speaker a stable left/right slot, lights it, dims the other.
@@ -598,6 +719,7 @@ export class Ui3D {
     this.epiEl.style.display = "flex";
     void this.epiEl.offsetWidth;
     this.epiEl.classList.add("on");
+    this.syncTouch();
     this.epiLock = performance.now() + 800 + lines.length * 320;
     return new Promise<void>((res) => { this.epiResolve = res; });
   }
@@ -605,7 +727,7 @@ export class Ui3D {
     if (this.epiEl.style.display === "none" || performance.now() < this.epiLock) return;
     const res = this.epiResolve; this.epiResolve = undefined;
     this.epiEl.classList.remove("on");
-    window.setTimeout(() => { this.epiEl.style.display = "none"; res?.(); }, 800);
+    window.setTimeout(() => { this.epiEl.style.display = "none"; this.syncTouch(); res?.(); }, 800);
   }
 
   // ---- card + fade ------------------------------------------------------

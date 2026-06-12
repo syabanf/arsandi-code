@@ -237,6 +237,13 @@ export class World3D {
   private actors: THREE.Sprite[] = [];
   private triggers: { x: number; z: number; r: number; fired: boolean; onEnter: () => void }[] = [];
   private roamers: Roamer[] = [];
+  // Bumped on every map load (clearWorld). A fire-and-forget cutscene coroutine
+  // captures this at start and bails if it changes, so a scene change can never
+  // leave a cutscene playing over the wrong scene.
+  sceneToken = 0;
+  // Analog movement from the on-screen joystick (touch). Folded into the same
+  // movement path as the keyboard each frame; magnitude scales walk speed.
+  private touchVec = { x: 0, z: 0 };
 
   // hooks set by the orchestrator
   onInteractHint: (label: string | null) => void = () => {};
@@ -453,8 +460,13 @@ export class World3D {
   private clearWorld(): void {
     this.markers = [];
     this.roamers = [];
-    // drop any in-flight cinematic state so a fresh map starts clean
+    // Drop any in-flight cinematic state so a fresh map starts clean. Resetting
+    // `locked` guarantees a newly loaded scene is never stuck locked by an
+    // interrupted cutscene; bumping sceneToken lets any in-flight cutscene
+    // coroutine notice its scene is gone and abort.
     this.cinematic = false;
+    this.locked = false;
+    this.sceneToken++;
     this.tweens.length = 0;
     this.actors.length = 0;
     this.triggers.length = 0;
@@ -1300,6 +1312,15 @@ export class World3D {
 
   setLocked(v: boolean): void { this.locked = v; }
 
+  // ---- touch input (on-screen controls drive these) --------------------
+  // Analog move vector from the joystick; components in roughly [-1, 1].
+  setMoveVector(x: number, z: number): void { this.touchVec.x = x; this.touchVec.z = z; }
+  // The on-screen "A" button: interact with the nearest marker (same as [E]).
+  pressInteract(): void { if (!this.locked) this.nearest()?.onInteract(); }
+  // The on-screen mount button: whistle for / dismiss the chocobo when allowed.
+  toggleMount(): void { if (this.canMount && !this.locked) this.setMounted(!this.mounted); }
+  canRide(): boolean { return this.canMount; }
+
   // Current player tile position (used by the cutscene director to frame shots).
   playerPos(): [number, number] { return [this.px, this.pz]; }
 
@@ -1488,11 +1509,14 @@ export class World3D {
       if (k.has("arrowright") || k.has("d")) vx += 1;
       if (k.has("arrowup") || k.has("w")) vz -= 1;
       if (k.has("arrowdown") || k.has("s")) vz += 1;
+      vx += this.touchVec.x; vz += this.touchVec.z; // on-screen joystick (touch)
     }
-    const keyMoving = vx !== 0 || vz !== 0;
+    const mag = Math.hypot(vx, vz);
+    const keyMoving = mag > 0.001;
     if (keyMoving) {
-      const l = Math.hypot(vx, vz); vx /= l; vz /= l;
-      const sp = this.mounted ? 8.6 : 5, nx = this.px + vx * sp * dt, nz = this.pz + vz * sp * dt;
+      const f = Math.min(1, mag); // analog: a partial joystick push walks slower
+      const ux = vx / mag, uz = vz / mag;
+      const sp = (this.mounted ? 8.6 : 5) * f, nx = this.px + ux * sp * dt, nz = this.pz + uz * sp * dt;
       if (!this.blocked(nx, this.pz)) this.px = nx;
       if (!this.blocked(this.px, nz)) this.pz = nz;
     }

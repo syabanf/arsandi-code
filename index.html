@@ -2,7 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#05030d" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>Arsandi Code</title>
     <style>
       html, body {
@@ -11,15 +18,25 @@
         height: 100%;
         background: #05030d;
         overflow: hidden;
+        /* mobile: the game owns all touch input — suppress page scroll, pinch-zoom,
+           pull-to-refresh, long-press selection/callout, and tap highlights */
+        touch-action: none;
+        overscroll-behavior: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
       }
       #game {
         width: 100vw;
         height: 100vh;
+        /* fill the safe area on notched phones */
+        height: 100dvh;
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      canvas { image-rendering: pixelated; }
+      canvas { image-rendering: pixelated; touch-action: none; }
     </style>
   </head>
   <body>
