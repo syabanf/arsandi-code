@@ -457,7 +457,9 @@ export class Ui3D {
   setGold(n: number): void { this.goldEl.textContent = `◆ ${n}`; }
   setHint(t: string): void { this.hintEl.textContent = t; }
   setPrompt(label: string | null): void {
-    this.promptEl.textContent = label ? `[E] ${label}` : "";
+    // Touch devices interact via the on-screen A button, not the [E] key.
+    const key = this.touchEnabled ? "(A)" : "[E]";
+    this.promptEl.textContent = label ? `${key} ${label}` : "";
   }
   // Live party HP strip (top-left). Pass the current roster; visibility follows
   // the floating party button (exploration scenes only, hidden behind modals).
